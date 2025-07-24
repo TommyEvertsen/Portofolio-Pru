@@ -1,0 +1,15 @@
+<template>
+  <main>
+    <v-container>
+      <v-row>
+        <v-img
+          max-width="400"
+          max-height="600"
+          cover
+          aspect-ratio="1"
+          src="/src/assets/pru.jpg"
+        ></v-img>
+      </v-row>
+    </v-container>
+  </main>
+</template>
