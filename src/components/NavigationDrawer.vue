@@ -7,7 +7,7 @@
       ></v-app-bar-nav-icon>
     </template>
 
-    <v-app-bar-title>{{ $route.meta.title || "Home" }} </v-app-bar-title>
+    <v-app-bar-title>{{ $route.title || "Home" }} </v-app-bar-title>
 
     <template v-slot:append>
       <v-btn icon color="var(--main-gold-light)">
