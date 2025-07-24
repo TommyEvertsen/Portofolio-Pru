@@ -2,6 +2,7 @@
   --main-black: #181818;
   --main-gold: #c9a13b;
   --main-gold-dark: #a4842a;
+  --main-gold-light: #ffd700;
   --main-white: #fff;
   --main-grey: #303030;
   --main-pink: #ffdbdb;
@@ -108,13 +109,17 @@
 }
 
 .v-list-item__prepend {
-  color: var(--main-gold);
+  color: var(--main-gold-light);
 }
 
 .v-list-item-subtitle {
   color: var(--main-white);
 }
 
+.v-divider {
+  border-width: 1.2px;
+  color: var(--main-white);
+}
 /* Animations */
 .fade-in {
   animation: fadein 2s;

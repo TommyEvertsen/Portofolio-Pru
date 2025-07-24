@@ -8,6 +8,12 @@
     </template>
 
     <v-app-bar-title>{{ $route.meta.title || "Home" }} </v-app-bar-title>
+
+    <template v-slot:append>
+      <v-btn icon color="var(--main-gold-light)">
+        <v-icon>mdi-document</v-icon>
+      </v-btn>
+    </template>
   </v-app-bar>
 
   <v-navigation-drawer
@@ -82,32 +88,14 @@ const show = () => {
   drawer.value = !drawer.value;
 };
 
-const navigateToCertificates = () => {
-  router.push({ name: "certificates" }).then(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-};
-
 const navigateToAboutMe = () => {
-  router.push({ name: "about" }).then(() => {
+  router.push({ name: "/AboutMe" }).then(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
 
 const navigateToHome = () => {
-  router.push({ name: "home" }).then(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-};
-
-const navigateToGames = () => {
-  router.push({ name: "video-games" }).then(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-};
-
-const navigateToProjects = () => {
-  router.push({ name: "projects" }).then(() => {
+  router.push({ name: "/Home" }).then(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
@@ -139,8 +127,8 @@ const mainlinks = [
   },
   {
     title: "About me",
-    icon: "mdi-face-man-shimmer-outline",
-    value: "about",
+    icon: "mdi-face-woman-shimmer-outline",
+    value: "AboutMe",
     click: navigateToAboutMe,
   },
   {
@@ -159,24 +147,6 @@ const mainlinks = [
 
 const subLinks = [
   {
-    title: "Projects",
-    icon: "mdi-application-braces-outline",
-    value: "projects",
-    click: navigateToProjects,
-  },
-  {
-    title: "Certificates",
-    icon: "mdi-certificate-outline",
-    value: "certificates",
-    click: navigateToCertificates,
-  },
-  {
-    title: "Game dev",
-    icon: "mdi-gamepad-variant-outline",
-    value: "Game development",
-    click: navigateToGames,
-  },
-  {
     title: "Blog",
     icon: "mdi-head-dots-horizontal-outline",
     value: "blog",
@@ -185,14 +155,6 @@ const subLinks = [
 ];
 
 const otherLinks = [
-  {
-    title: "Github",
-    icon: "mdi-github",
-    value: "github",
-    href: "https://github.com/TommyEvertsen",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
   {
     title: "LinkedIn",
     icon: "mdi-linkedin",
