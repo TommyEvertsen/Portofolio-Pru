@@ -1,162 +1,77 @@
 <template>
-  <main class="" style="">
-    <v-container class="px-10 mb-10">
+  <main class="home-main">
+    <v-container class="home-container px-10">
       <v-row>
-        <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="mt-10">
-          <h2 class="fade-in text-center">Hello welcome to my portofolio</h2>
-          <h1 class="mt-2 fade-in-slow text-center" style="color: #d76c82">
-            Phuc Huynh Evertsen (Pru)
-          </h1>
-
-          <h2 class="fade-in-snail text-center">Circular economy researcher</h2>
-
-          <div class="scew-6">
-            <v-img
-              :src="pru"
-              max-height="600"
-              class="mt-10 fade-in-snails rounded scew-6"
-            >
-            </v-img>
+        <v-col cols="12" class="mt-10">
+          <div class="flex justify-center text-center">
+            <v-avatar size="250" class="mt-10 avatar-shadow fade-in">
+              <v-img :src="pru" cover></v-img>
+            </v-avatar>
           </div>
+          <!-- <h2 class="home-title fade-in text-center">
+            Welcome to my Portfolio
+          </h2> -->
+          <h2 class="home-name fade-in-slow text-center mt-5">
+            Phuc Huynh Evertsen (Pru)
+          </h2>
+          <h2 class="home-subtitle fade-in-snail text-center">
+            Circular Economy Researcher
+          </h2>
         </v-col>
       </v-row>
 
-      <v-row class="mt-15 flex justify-center -space-x-14">
-        <v-col
-          cols="12"
-          xl="6"
-          lg="6"
-          md="12"
-          sm="12"
-          xs="12"
-          class="mix-blend-multiply"
-        >
-          <v-sheet>
-            <h1 class="text-center" style="color: #594100">Buissness</h1>
-
-            <p class="mt-10 px-8 py-8" style="background-color: #ffdbdb">
-              I have a msters in buissness lorem ipsum lorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsum
+      <v-row class="flex justify-center">
+        <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
+          <v-sheet class="info-card business-card">
+            <h1 class="card-title text-center">Business</h1>
+            <p class="card-desc">
+              I hold a Master's degree in Business. My research focuses on
+              sustainable business models, innovation, and the intersection of
+              commerce and circular economy. I am passionate about driving
+              positive change through responsible business practices.
             </p>
+            <v-btn
+              class="infoCard-btn"
+              variant="outlined"
+              prepend-icon="mdi-web"
+              @click="$router.push({ name: 'contact' })"
+            >
+              Information
+            </v-btn>
           </v-sheet>
         </v-col>
 
-        <v-col
-          cols="12"
-          xl="6"
-          lg="6"
-          md="12"
-          sm="12"
-          xs="12"
-          class="mix-blend-multiply"
-        >
-          <h1 class="text-center" style="color: #594100">Circular economy</h1>
-          <v-sheet class="mt-10">
-            <p style="background-color: #594100" class="text-white">
-              I have an PHD in circular economy ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsum trse
+        <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
+          <v-sheet class="info-card research-card">
+            <h1 class="card-title text-center">Circular Economy</h1>
+            <p class="card-desc">
+              As a PhD researcher in Circular Economy, I explore strategies for
+              resource efficiency, waste reduction, and sustainable development.
+              My work aims to create impactful solutions for a more resilient
+              and regenerative future.
             </p>
+            <v-btn
+              class="infoCard-btn"
+              variant="outlined"
+              prepend-icon="mdi-web"
+              @click="$router.push({ name: 'contact' })"
+            >
+              Publications
+            </v-btn>
           </v-sheet>
         </v-col>
       </v-row>
-
-      <v-btn
-        class="button mt-10"
-        variant="outlined"
-        prepend-icon="mdi-web"
-        color="#D76C82"
-        style=""
-        @click="$router.push({ name: 'contact' })"
-      >
-        Contact me</v-btn
-      >
     </v-container>
   </main>
 </template>
 
 <script setup>
 import { useRouter } from "vue-router";
-
 import pru from "@/assets/pru.jpg";
-
 import { ref } from "vue";
+import "@/styles/styles.css";
 const loaded = ref(false);
-
 const router = useRouter();
 </script>
 
-<style>
-/* Main colors 
-#FFDBDB
-#FFC6C6
-#644A07
-#594100
- */
-
-.fade-in {
-  animation: fadein 2s;
-}
-
-.fade-in-slow {
-  opacity: 0;
-  animation: fadeinslow 1s ease-in 1s forwards;
-}
-
-.fade-in-snail {
-  opacity: 0;
-  animation: fadeinsnail 1s ease-in 2s forwards;
-}
-
-.fade-in-snails {
-  opacity: 0;
-  animation: fadeinsnails 1s ease-in 3s forwards;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeinslow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeinsnail {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeinsnails {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.button:hover {
-  background-color: #ff69b4;
-  color: aliceblue !important;
-}
-</style>
+<style></style>
