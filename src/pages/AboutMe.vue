@@ -19,7 +19,7 @@
               icon
               href="https://scholar.google.com/citations?user=49P1U8sAAAAJ&hl=vi&oi=ao"
               target="_blank"
-              color="var(--main-pink)"
+              color="var(--icons-dark)"
               title="Google Scholar"
             >
               <v-icon>mdi-google</v-icon>
@@ -28,7 +28,7 @@
               icon
               href="https://orcid.org/0000-0003-3783-0342"
               target="_blank"
-              color="var(--main-pink)"
+              color="var(--icons-dark)"
               title="ORCID"
             >
               <v-icon>mdi-alpha-o-circle-outline</v-icon>
@@ -37,7 +37,7 @@
               icon
               href="https://www.linkedin.com/in/phucevertsen/"
               target="_blank"
-              color="var(--main-pink)"
+              color="var(--icons-dark)"
               title="LinkedIn"
             >
               <v-icon>mdi-linkedin</v-icon>
@@ -209,32 +209,27 @@
 
 <script setup></script>
 
-<style scoped>
+<style>
 .about-main {
-  background: var(--main-black);
+  background: var(--main);
   min-height: 100vh;
   padding-top: 32px;
 }
 
 .avatar-shadow {
   box-shadow: 0 4px 24px rgba(201, 161, 59, 0.25);
-  border: 4px solid var(--main-gold);
+  border: 4px solid var(--main-secondary);
 }
 
 .about-name {
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--main-white);
+  color: var(--text-headline);
   margin-bottom: 0.2rem;
 }
 
-.pink {
-  color: var(--main-pink);
-  font-weight: 700;
-}
-
 .about-title {
-  color: var(--main-gold);
+  color: var(--main-secondary);
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -245,19 +240,19 @@
   gap: 12px;
   justify-content: center;
   margin-top: 8px;
-  color: var(--main-pink);
+  color: var(--main-secondary);
 }
 
 .about-card {
   background: var(--main-white);
   border-radius: 18px;
-  border: 4px solid var(--main-gold);
-  color: var(--main-black);
+  border: 4px solid var(--main-secondary);
+  color: var(--text-black);
   box-shadow: 0 8px 40px rgba(201, 161, 59, 0.12);
 }
 
 .section-title {
-  color: var(--main-gold);
+  color: var(--main-secondary);
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -271,10 +266,11 @@
 
 .about-card li {
   margin-bottom: 0.5rem;
+  color: var(--text-black);
 }
 
 .about-card a {
-  color: var(--main-black);
+  color: var(--text-black);
   text-decoration: underline;
 }
 </style>
