@@ -41,9 +41,9 @@ const items = [
 
 <style scoped>
 .app-footer {
-  background: var(--main-black);
-  color: var(--main-gold);
-  border-top: 1px solid var(--main-gold);
+  background: var(--main);
+  color: var(--main-secondary);
+  border-top: 1px solid var(--main-secondary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,22 +57,16 @@ const items = [
 }
 
 .social-link :deep(.v-icon) {
-  color: var(--main-gold-light);
+  color: var(--icons-bright);
   transition: color 0.2s;
 }
 
 .social-link :deep(.v-icon):hover {
-  color: var(--main-pink);
+  color: var(--main-secondary);
 }
 
 .footer-text {
-  color: var(--main-gold);
+  color: var(--main-secondary);
   font-size: 0.95rem;
-}
-
-.footer-license {
-  color: var(--main-gold-light);
-  text-decoration: underline;
-  margin-left: 4px;
 }
 </style>

@@ -1,17 +1,22 @@
 <template>
-  <v-app-bar elevation="0" color="#303030">
+  <v-app-bar elevation="0" color="var(--main-grey)">
     <template v-slot:prepend>
       <v-app-bar-nav-icon
         @click="show"
-        color="var(--main-gold)"
+        color="var(--icons-bright)"
       ></v-app-bar-nav-icon>
     </template>
 
-    <v-app-bar-title>{{ $route.title || "Home" }} </v-app-bar-title>
+    <v-app-bar-title>{{ $route.meta.title || "Home" }} </v-app-bar-title>
 
     <template v-slot:append>
-      <v-btn icon color="var(--main-gold-light)">
+      <v-btn icon color="var(--icons-bright)">
         <v-icon>mdi-document</v-icon>
+      </v-btn>
+      <v-btn icon @click="toggleTheme" color="var(--main-gold-light)">
+        <v-icon>{{
+          isDark ? "mdi-weather-night" : "mdi-white-balance-sunny"
+        }}</v-icon>
       </v-btn>
     </template>
   </v-app-bar>
@@ -20,7 +25,7 @@
     width="220"
     v-if="drawer"
     v-model="drawer"
-    color="var(--main-black)"
+    color="var(--main)"
   >
     <v-list>
       <v-list-item
@@ -33,7 +38,7 @@
 
     <v-divider></v-divider>
 
-    <v-list color="#6495ED" density="compact" nav>
+    <v-list color="var(--navigation-links)" density="compact" nav>
       <v-list-item
         v-for="link in mainlinks"
         :key="link.title"
@@ -77,16 +82,28 @@
 </template>
 
 <script setup>
-import { ref, defineAsyncComponent } from "vue";
+import { ref, watch } from "vue";
 import { useRouter } from "vue-router";
 
 const drawer = ref(false);
-
 const router = useRouter();
 
 const show = () => {
   drawer.value = !drawer.value;
 };
+
+// Theme toggle logic
+const isDark = ref(true);
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value;
+  document.body.classList.toggle("theme-dark", isDark.value);
+  document.body.classList.toggle("theme-light", !isDark.value);
+};
+
+if (typeof window !== "undefined") {
+  document.body.classList.add("theme-dark");
+}
 
 const navigateToAboutMe = () => {
   router.push({ name: "/AboutMe" }).then(() => {
@@ -176,6 +193,11 @@ const otherLinks = [
   > v-list-item--one-line
   > v-list-item--rounded
   > v-list-item--variant-text {
-  color: #ffdbdb;
+  color: var(--main-secondary);
+}
+
+.v-list-item.v-list-item--active {
+  color: var(--main-pink) !important;
+  background: rgba(201, 161, 59, 0.08) !important;
 }
 </style>
