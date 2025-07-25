@@ -13,9 +13,9 @@
       <v-btn icon color="var(--icons-bright)">
         <v-icon>mdi-document</v-icon>
       </v-btn>
-      <v-btn icon @click="toggleTheme" color="var(--main-gold-light)">
+      <v-btn icon @click="toggleTheme" color="var(--icons-bright)">
         <v-icon>{{
-          isDark ? "mdi-weather-night" : "mdi-white-balance-sunny"
+          isDark ? "mdi-white-balance-sunny" : "mdi-weather-night"
         }}</v-icon>
       </v-btn>
     </template>
@@ -52,7 +52,7 @@
 
       <v-divider></v-divider>
 
-      <v-list-item
+      <!-- <v-list-item
         v-for="link in subLinks"
         :key="link.title"
         :disabled="link.disabled"
@@ -63,7 +63,7 @@
         :active="$route.name === link.value"
       ></v-list-item>
 
-      <v-divider></v-divider>
+      <v-divider></v-divider> -->
 
       <v-list-item
         v-for="link in otherLinks"
@@ -162,21 +162,37 @@ const mainlinks = [
   },
 ];
 
-const subLinks = [
+/* const subLinks = [
   {
     title: "Blog",
     icon: "mdi-head-dots-horizontal-outline",
     value: "blog",
     click: navigateToBlog,
   },
-];
+]; */
 
 const otherLinks = [
+  {
+    title: "Google scholar",
+    icon: "mdi-google",
+    value: "googleScholar",
+    href: "https://scholar.google.com/citations?user=49P1U8sAAAAJ&hl=vi&oi=ao",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
+  {
+    title: "Orcid",
+    icon: "mdi-alpha-o-circle-outline",
+    value: "orcid",
+    href: "https://orcid.org/0000-0003-3783-0342",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
   {
     title: "LinkedIn",
     icon: "mdi-linkedin",
     value: "linkedIn",
-    href: "https://www.linkedin.com/in/tommy-evertsen/",
+    href: "https://www.linkedin.com/in/phucevertsen/",
     target: "_blank",
     rel: "noopener noreferrer",
   },
