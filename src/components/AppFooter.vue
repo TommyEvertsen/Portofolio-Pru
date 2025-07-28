@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import "@/styles/styles.css";
 const items = [
   {
     title: "Google Scholar",
@@ -39,34 +40,4 @@ const items = [
 ];
 </script>
 
-<style scoped>
-.app-footer {
-  background: var(--main);
-  color: var(--main-secondary);
-  border-top: 1px solid var(--main-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 32px;
-  font-size: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 18px;
-}
-
-.social-link :deep(.v-icon) {
-  color: var(--icons-bright);
-  transition: color 0.2s;
-}
-
-.social-link :deep(.v-icon):hover {
-  color: var(--main-secondary);
-}
-
-.footer-text {
-  color: var(--main-secondary);
-  font-size: 0.95rem;
-}
-</style>
+<style></style>

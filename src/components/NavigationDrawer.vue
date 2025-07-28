@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevation="0" color="var(--main-grey)">
+  <v-app-bar elevation="0" color="var(--main-context)">
     <template v-slot:prepend>
       <v-app-bar-nav-icon
         @click="show"
@@ -10,10 +10,12 @@
     <v-app-bar-title>{{ $route.meta.title || "Home" }} </v-app-bar-title>
 
     <template v-slot:append>
-      <v-btn icon color="var(--icons-bright)">
-        <v-icon>mdi-document</v-icon>
-      </v-btn>
-      <v-btn icon @click="toggleTheme" color="var(--icons-bright)">
+      <v-btn
+        class="theme-button"
+        icon
+        @click="toggleTheme"
+        color="var(--icons-bright)"
+      >
         <v-icon>{{
           isDark ? "mdi-white-balance-sunny" : "mdi-weather-night"
         }}</v-icon>
@@ -124,7 +126,7 @@ const navigateToEducation = () => {
 };
 
 const navigateToContact = () => {
-  router.push({ name: "contact" }).then(() => {
+  router.push({ name: "/Contact" }).then(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
@@ -156,6 +158,18 @@ const mainlinks = [
   },
   {
     title: "Education",
+    icon: "mdi-school-outline",
+    value: "education",
+    click: navigateToEducation,
+  },
+  {
+    title: "Publications",
+    icon: "mdi-school-outline",
+    value: "education",
+    click: navigateToEducation,
+  },
+  {
+    title: "Projects",
     icon: "mdi-school-outline",
     value: "education",
     click: navigateToEducation,
@@ -213,7 +227,7 @@ const otherLinks = [
 }
 
 .v-list-item.v-list-item--active {
-  color: var(--main-pink) !important;
-  background: rgba(201, 161, 59, 0.08) !important;
+  background-color: var(--main-pink) !important;
+  color: var(--text-headline) !important;
 }
 </style>

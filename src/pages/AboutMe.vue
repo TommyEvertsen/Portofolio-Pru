@@ -1,9 +1,3 @@
-<route-meta>
-{
-  "title": "About Me"
-}
-</route-meta>
-
 <template>
   <main class="about-main">
     <v-container>
@@ -45,7 +39,10 @@
           </div>
         </v-col>
         <v-col cols="12" md="8">
-          <v-sheet class="about-card pa-6">
+          <v-sheet
+            class="about-card pa-6"
+            style="background-color: var(--main-context)"
+          >
             <h3 class="section-title">Hey there! 👋</h3>
             <p>
               I'm Pru—a Norwegian-Vietnamese researcher, digital circular
@@ -209,68 +206,4 @@
 
 <script setup></script>
 
-<style>
-.about-main {
-  background: var(--main);
-  min-height: 100vh;
-  padding-top: 32px;
-}
-
-.avatar-shadow {
-  box-shadow: 0 4px 24px rgba(201, 161, 59, 0.25);
-  border: 4px solid var(--main-secondary);
-}
-
-.about-name {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--text-headline);
-  margin-bottom: 0.2rem;
-}
-
-.about-title {
-  color: var(--main-secondary);
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.about-links {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 8px;
-  color: var(--main-secondary);
-}
-
-.about-card {
-  background: var(--main-white);
-  border-radius: 18px;
-  border: 4px solid var(--main-secondary);
-  color: var(--text-black);
-  box-shadow: 0 8px 40px rgba(201, 161, 59, 0.12);
-}
-
-.section-title {
-  color: var(--main-secondary);
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
-}
-
-.about-card ul {
-  margin-bottom: 1.2rem;
-  padding-left: 1.2rem;
-}
-
-.about-card li {
-  margin-bottom: 0.5rem;
-  color: var(--text-black);
-}
-
-.about-card a {
-  color: var(--text-black);
-  text-decoration: underline;
-}
-</style>
+<style></style>
