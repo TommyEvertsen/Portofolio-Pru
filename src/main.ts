@@ -5,19 +5,23 @@
  */
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
 
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
 // Styles
-import 'unfonts.css'
+import "unfonts.css";
+import "@/styles/styles.css";
 
-const app = createApp(App)
+// Set default theme class on body
+document.body.classList.add("theme-dark");
 
-registerPlugins(app)
+const app = createApp(App);
 
-app.mount('#app')
+registerPlugins(app);
+
+app.mount("#app");

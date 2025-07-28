@@ -1,16 +1,14 @@
 <template>
   <main class="home-main">
-    <v-container class="home-container px-10">
+    <v-container class="home-containe fill-height">
       <v-row>
-        <v-col cols="12" class="mt-10">
+        <v-col cols="12" class="">
           <div class="flex justify-center text-center">
-            <v-avatar size="250" class="mt-10 avatar-shadow fade-in">
+            <v-avatar size="250" class="mt-10 fade-in">
               <v-img :src="pru" cover></v-img>
             </v-avatar>
           </div>
-          <!-- <h2 class="home-title fade-in text-center">
-            Welcome to my Portfolio
-          </h2> -->
+
           <h2 class="home-name fade-in-slow text-center mt-5">
             Phuc Huynh Evertsen (Pru)
           </h2>
@@ -25,10 +23,10 @@
           <v-sheet class="info-card business-card">
             <h1 class="card-title text-center">Business</h1>
             <p class="card-desc">
-              I hold a Master's degree in Business. My research focuses on
+              I hold a Master's degree in Business. My research focus on
               sustainable business models, innovation, and the intersection of
               commerce and circular economy. I am passionate about driving
-              positive change through responsible business practices.
+              change through responsible business practices.
             </p>
             <v-btn
               class="infoCard-btn"
@@ -69,7 +67,6 @@
 import { useRouter } from "vue-router";
 import pru from "@/assets/pru.jpg";
 import { ref } from "vue";
-import "@/styles/styles.css";
 const loaded = ref(false);
 const router = useRouter();
 </script>
