@@ -2,35 +2,37 @@
 
 :root,
 .theme-dark {
-  --main: #181818;
-  --main-secondary: #c9a13b;
-  --main-context: #303030;
-  --main-button: #c9a13b;
-  --main-button-hover: #c9a13b;
+  --main: #1a120b;
+  --main-secondary: #e5e5cb;
+  --main-context: #e5e5cb;
+  --main-button: #3c2a21;
+  --main-button-hover: #d5cea3;
   --main-button-hover-text: #303030;
-  --main-text: #f5f5f5;
-  --main-text-secondary: #c9a13b;
-  --text-headline: #f5f5f5;
-  --navigation-links: #ffd700;
-  --icons-bright: #ffd700;
-  --icons-secondary: #ffd700;
+  --main-text: #000000;
+  --main-text-secondary: #e5e5cb;
+  --text-headline: #e5e5cb;
+  --navigation-links: #050505;
+  --icons-bright: #d5cea3;
+  --icons-secondary: #d5cea3;
   --icons-dark: #c9a13b;
+  --active: #303030;
 }
 
 .theme-light {
-  --main: #f3e9dc;
-  --main-secondary: #d96f32;
-  --main-context: #d96f32;
-  --main-button: #f3e9dc;
-  --main-button-hover: #f3e9dc;
-  --main-button-hover-text: #303030;
-  --main-text: #fff;
-  --main-text-secondary: #f3e9dc;
-  --text-headline: #c75d2c;
-  --navigation-links: #181818;
-  --icons-bright: #f5f5f5;
-  --icons-secondary: #d96f32;
-  --icons-dark: #d96f32;
+  --main: #fefcf3; /* Background color */
+  --main-secondary: #000000; /* borders  */
+  --main-context: #f5ebe0; /* the boxes of text and top of page*/
+  --main-button: #dba39a; /* buttons */
+  --main-button-hover: #f0dbdb; /* button when have the mouse on it */
+  --main-button-hover-text: #000000; /* text color of the button */
+  --main-text: #000000; /* text */
+  --main-text-secondary: #000000; /* another text color if needed  */
+  --text-headline: #000000; /* text Headlines */
+  --navigation-links: #f0dbdb; /* the links text on the sides */
+  --icons-bright: #000000; /*  The icons on the top of the page */
+  --icons-secondary: #000000; /* the color of icons before the links on the navigation to the left */
+  --icons-dark: #f8c794; /* The icons under the name of stratcher on aboutme page */
+  --active: #f0dbdb;
 }
 
 /* alt light theme
@@ -58,11 +60,11 @@ main {
 }
 
 .home-name {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: var(--text-headline);
   margin-bottom: 0.5rem;
   font-family: "Carattere", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -80,7 +82,7 @@ main {
 .info-card {
   border-radius: 25px !important;
   padding: 2rem;
-  border: 4px solid var(--main-secondary) !important;
+  /* border: 4px solid var(--main-secondary) !important; */
   background-color: var(--main-context) !important;
 }
 
@@ -208,6 +210,10 @@ main {
   color: var(--text-headline);
 }
 
+.v-list-item.v-list-item--active {
+  background-color: var(--active) !important;
+}
+
 /* Contact page */
 .contact-main {
   background: var(--main);
@@ -227,7 +233,7 @@ main {
   color: var(--main-text-secondary);
   font-size: 2rem;
   font-family: "Carattere", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   letter-spacing: 0.5px;
 }

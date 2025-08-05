@@ -28,10 +28,11 @@
     v-if="drawer"
     v-model="drawer"
     color="var(--main)"
+    density
   >
     <v-list>
       <v-list-item
-        prepend-avatar=""
+        prepend-avatar="@/assets/pru.jpg"
         class="me"
         subtitle="Reasearcher"
         title="Phuc Evertsen"
@@ -49,7 +50,6 @@
         :title="link.title"
         :value="link.value"
         @click="link.click"
-        :active="$route.name === link.value"
       ></v-list-item>
 
       <v-divider></v-divider>
@@ -104,7 +104,7 @@ const toggleTheme = () => {
 };
 
 if (typeof window !== "undefined") {
-  document.body.classList.add("theme-dark");
+  document.body.classList.add("theme-light");
 }
 
 const navigateToAboutMe = () => {
@@ -131,8 +131,8 @@ const navigateToContact = () => {
   });
 };
 
-const navigateToBlog = () => {
-  router.push({ name: "blog" }).then(() => {
+const navigateToPublications = () => {
+  router.push({ name: "/Publications" }).then(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
@@ -164,13 +164,13 @@ const mainlinks = [
   },
   {
     title: "Publications",
-    icon: "mdi-school-outline",
-    value: "education",
-    click: navigateToEducation,
+    icon: "mdi-text-box-outline",
+    value: "Publications",
+    click: navigateToPublications,
   },
   {
     title: "Projects",
-    icon: "mdi-school-outline",
+    icon: "mdi-file-table-outline",
     value: "education",
     click: navigateToEducation,
   },
@@ -213,21 +213,4 @@ const otherLinks = [
 ];
 </script>
 
-<style>
-.v-list-item
-  v-list-item--active
-  > v-list-item--link
-  > v-list-item--nav
-  > v-theme--light
-  > v-list-item--density-compact
-  > v-list-item--one-line
-  > v-list-item--rounded
-  > v-list-item--variant-text {
-  color: var(--main-secondary);
-}
-
-.v-list-item.v-list-item--active {
-  background-color: var(--main-pink) !important;
-  color: var(--text-headline) !important;
-}
-</style>
+<style></style>
