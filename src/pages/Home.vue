@@ -10,7 +10,7 @@
           </div>
 
           <h2 class="home-name fade-in-slow text-center mt-5">
-            Phuc Huynh Evertsen (Pru)
+            Pru Huynh Evertsen
           </h2>
           <h2 class="home-subtitle fade-in-snail text-center">
             Circular Economy Researcher
