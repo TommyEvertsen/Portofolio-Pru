@@ -1,5 +1,5 @@
 <template>
-  <main class="contact-main">
+  <main>
     <v-container class="fill-height d-flex align-center justify-center">
       <v-row class="justify-center">
         <v-col cols="12" md="8" lg="6">

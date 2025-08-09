@@ -1,12 +1,10 @@
 <template>
-  <main class="home-main">
+  <main>
     <v-container class="home-containe fill-height">
       <v-row>
         <v-col cols="12" class="">
           <div class="flex justify-center text-center">
-            <v-avatar size="250" class="mt-10 fade-in">
-              <v-img :src="pru" cover></v-img>
-            </v-avatar>
+            <v-img :src="pru" height="400px" class="mt-10 fade-in"></v-img>
           </div>
 
           <h2 class="home-name fade-in-slow text-center mt-5">

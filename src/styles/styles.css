@@ -12,9 +12,10 @@
   --main-text-secondary: #e5e5cb;
   --text-headline: #e5e5cb;
   --navigation-links: #050505;
-  --icons-bright: #d5cea3;
+  --icons-bright: #050505;
   --icons-secondary: #d5cea3;
   --icons-dark: #c9a13b;
+  --theme: #ff8c00;
   --active: #303030;
 }
 
@@ -22,7 +23,7 @@
   --main: #fefcf3; /* Background color */
   --main-secondary: #000000; /* borders  */
   --main-context: #f5ebe0; /* the boxes of text and top of page*/
-  --main-button: #dba39a; /* buttons */
+  --main-button: #000000; /* buttons */
   --main-button-hover: #f0dbdb; /* button when have the mouse on it */
   --main-button-hover-text: #000000; /* text color of the button */
   --main-text: #000000; /* text */
@@ -32,6 +33,7 @@
   --icons-bright: #000000; /*  The icons on the top of the page */
   --icons-secondary: #000000; /* the color of icons before the links on the navigation to the left */
   --icons-dark: #f8c794; /* The icons under the name of stratcher on aboutme page */
+  --theme: #ff8c00;
   --active: #f0dbdb;
 }
 
@@ -47,7 +49,7 @@ main {
 
 .v-container {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0;
   border-radius: 0;
   background: var(--main);
@@ -87,7 +89,7 @@ main {
 }
 
 .infoCard-btn {
-  color: var(--main-button);
+  color: var(--main-button) !important;
 }
 
 .infoCard-btn:hover {
@@ -186,7 +188,7 @@ main {
 }
 
 .v-navigation-drawer {
-  border-right: 1px solid var(--main-secondary);
+  border-right: 1px solid var(--main-text-secondary) !important;
 }
 
 .v-app-bar-title {
@@ -279,7 +281,7 @@ main {
 .app-footer {
   background: var(--main) !important;
   color: var(--main-secondary);
-  border-top: 1px solid var(--main-secondary) !important;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -303,6 +305,11 @@ main {
 }
 
 .footer-text {
+  color: var(--main-secondary);
+  font-size: 0.95rem;
+}
+
+.footer-text > a {
   color: var(--main-secondary);
   font-size: 0.95rem;
 }
