@@ -1,7 +1,82 @@
 <template>
   <main>
     <v-container>
-      <v-row dense>
+      <v-row class="mb-10 mt-5">
+        <v-col xl="6" lg="6" md="6" sm="12">
+          <div class="publicationText">
+            <h1 class="publicationTextHeadline">Publications</h1>
+            <p>
+              Through my study and work i have published several articles on
+              circular economy
+            </p>
+            <p>Stratcher fill out</p>
+          </div>
+        </v-col>
+        <v-col xl="6" lg="6" md="6" sm="12"
+          ><v-img src="@/assets/pru2.jpg" max-height="600px"> </v-img>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-timeline
+          line-color="var(--main-text-secondary)"
+          direction="vertical"
+        >
+          <v-timeline-item
+            v-for="(publication, i) in publications"
+            :key="i"
+            :dot-color="publication.color"
+            :icon="publication.icon"
+            fill-dot
+            elevation="16"
+            max-width="600px"
+            min-width="600px"
+          >
+            <v-card>
+              <v-card-title :class="['text-h6', `bg-${publication.color}`]">
+                {{ publication.type }}
+              </v-card-title>
+              <v-card-text class="bg-white text--primary text-lg">
+                <p style="font-size: 1rem">
+                  {{ publication.title }}
+                </p>
+              </v-card-text>
+              <v-card-actions class="bg-white text--primary">
+                <v-dialog max-width="500">
+                  <template v-slot:activator="{ props: activatorProps }">
+                    <v-btn
+                      :color="publication.color"
+                      v-bind="activatorProps"
+                      text="Abstrakt"
+                      variant="outlined"
+                    ></v-btn>
+                  </template>
+
+                  <template v-slot:default="{ isActive }">
+                    <v-card class="abstractCard">
+                      <v-card-title>
+                        {{ publication.title }}
+                      </v-card-title>
+                      <v-card-text> {{ publication.abstract }} </v-card-text>
+
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+
+                        <v-btn
+                          color="var(--main-button)"
+                          variant="outlined"
+                          text="Lukk"
+                          @click="isActive.value = false"
+                        ></v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </v-card-actions>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
+        <!-- <v-row dense>
         <v-col
           v-for="(pub, i) in publications"
           :key="i"
@@ -36,7 +111,7 @@
                     color="var(--main-button)"
                     text="Link"
                     variant="outlined"
-                    :href="pub.link"
+                    :href="publication.link"
                   >
                   </v-btn>
                 </template>
@@ -72,6 +147,7 @@
             </v-expand-transition>
           </v-card>
         </v-col>
+      </v-row> -->
       </v-row>
     </v-container>
   </main>
@@ -92,6 +168,8 @@ const publications = ref([
     show: false,
     type: "Article",
     publisher: "Elsevier",
+    color: "red-lighten-2",
+    icon: "mdi-star",
   },
   {
     title:
@@ -104,6 +182,8 @@ const publications = ref([
     show: false,
     type: "Article",
     publisher: "Emerald insight",
+    color: "indigo-lighten-2",
+    icon: "mdi-layers-triple",
   },
   {
     title:
@@ -117,6 +197,8 @@ const publications = ref([
     show: false,
     type: "Article",
     publisher: "Elsevier",
+    color: "red-lighten-2",
+    icon: "mdi-star",
   },
   {
     title:
@@ -129,6 +211,8 @@ const publications = ref([
     show: false,
     type: "Article",
     publisher: "Emerald insight",
+    color: "green-lighten-1",
+    icon: "mdi-airballoon",
   },
   {
     title: "The circular economy impacts of digital academic spin-offs",
@@ -140,6 +224,8 @@ const publications = ref([
       "Citation: Huynh, P. H. and Rasmussen, E. (2021) 'The circular economy impacts of digital academic spin-offs', in Siri Jakobsen, T.L., Francesco Quatraro, Einar Rasmussen, Marianne Steinmo (ed.) Research Handbook of Innovation for a Circular Economy. Cheltenham, UK: Edward Elgar Publishing.",
     type: "Article (Book chapter)",
     publisher: "Elsevier",
+    color: "purple-lighten-2",
+    icon: "mdi-book-variant",
   },
   {
     title:
@@ -147,6 +233,8 @@ const publications = ref([
     link: "",
     type: "PHD thesis",
     publisher: "Pru",
+    color: "red-lighten-2",
+    icon: "mdi-star",
   },
 ]);
 </script>
@@ -168,5 +256,15 @@ const publications = ref([
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: large !important;
+}
+
+.publicationText {
+  color: var(--main-text-secondary);
+}
+
+.publicationTextHeadline {
+  font-family: "Carattere", cursive;
+  font-size: 3rem;
+  font-weight: 400;
 }
 </style>

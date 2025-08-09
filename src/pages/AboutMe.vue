@@ -1,5 +1,5 @@
 <template>
-  <main class="about-main">
+  <main>
     <v-container>
       <v-row class="justify-center mb-8">
         <v-col cols="12" md="4" class="text-center">
@@ -84,126 +84,96 @@
                 researcher (and tried all the local food!)
               </li>
             </ul>
-            <!--  <h3 class="section-title mt-6">What I Do at SINTEF</h3>
-            <ul>
-              <li>
-                Lead and join cool research projects funded by the EU &
-                Norwegian Research Council
-              </li>
-              <li>Write grant applications (sometimes with too much coffee)</li>
-              <li>Help teams grow and collaborate</li>
-            </ul> -->
-            <!-- <h3 class="section-title mt-6">Teaching & Sharing</h3>
-            <ul>
-              <li>
-                Course manager & lecturer for “Social and Sustainable
-                Entrepreneurship”
-              </li>
-              <li>
-                Guest lecturer, thesis examiner, and supervisor—helping students
-                find their spark
-              </li>
-              <li>
-                Teaching assistant in microeconomics & econometrics (yes,
-                numbers can be fun!)
-              </li>
-            </ul>
-            <h3 class="section-title mt-6">Projects & Passions</h3>
-            <ul>
-              <li>
-                SUM4Re, SirkBygg, FmeZEN, ARV, Smart Building Hub—if it’s about
-                circular buildings, I’m in!
-              </li>
-              <li>
-                Always looking for new ways to make construction more
-                sustainable and digital
-              </li>
-            </ul> -->
-            <!--  <h3 class="section-title mt-6">Publications & Research</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://doi.org/10.1016/j.spc.2024.10.019"
-                  target="_blank"
-                >
-                  Toward a collaborative circular ecosystem within the built
-                  environment
-                </a>
-                (IF 10.9)
-              </li>
-              <li>
-                <a
-                  href="https://doi.org/10.1108/IJEBR-10-2022-0937"
-                  target="_blank"
-                >
-                  Resource configurations among digital academic spin-offs
-                </a>
-                (IF 6.2)
-              </li>
-              <li>
-                <a
-                  href="https://doi.org/10.1016/j.techfore.2022.122102"
-                  target="_blank"
-                >
-                  Commercializing circular economy innovations: A taxonomy of
-                  academic spin-offs
-                </a>
-                (IF 12.9)
-              </li>
-              <li>
-                <a
-                  href="https://doi.org/10.1108/IJPPM-12-2020-0683"
-                  target="_blank"
-                >
-                  Enabling circular business models in the fashion industry: the
-                  role of digital innovation
-                </a>
-              </li>
-            </ul> -->
-            <h3 class="section-title mt-6">Skills & Superpowers</h3>
-            <ul>
-              <li>Programming: R, Stata, fsQCA, Endnote & Zotero</li>
-              <li>
-                Quantitative & qualitative analysis, academic writing, project
-                management
-              </li>
-              <li>Communication, teamwork, and a dash of creative thinking</li>
-            </ul>
-            <h3 class="section-title mt-6">Let’s Connect!</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://www.nord.no/aktuelt/presenterte-alternativer-til-fast-fashion-i-sin-disputas"
-                  target="_blank"
-                >
-                  Fast Fashion Alternatives (2023)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://www.esbri.se/artikel_visa.asp?id=2589"
-                  target="_blank"
-                >
-                  Radical Innovations for the Circular Economy (2023)
-                </a>
-              </li>
-              <li>
-                Always happy to chat about research, innovation, or just
-                life—reach out on
-                <a
-                  href="https://www.linkedin.com/in/phucevertsen/"
-                  target="_blank"
-                  >LinkedIn</a
-                >!
-              </li>
-            </ul>
           </v-sheet>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col xl="4" lg="4" md="4" sm="12">
+          <div class="hobbies">
+            <h2 class="hobbiesHeadline">My hobbies</h2>
+            <p>
+              My hobbies include traveling, painting eating food and eating
+              food. Stratcher fill out
+            </p>
+          </div>
+        </v-col>
+        <v-col xl="8" lg="8" md="8" sm="12">
+          <div>
+            <v-carousel
+              height="600px"
+              :class="{
+                'crossfade-carousel': currentTransition === 'crossfade',
+              }"
+              hide-delimiters
+            >
+              <v-carousel-item
+                v-for="(item, i) in items"
+                :key="i"
+                :src="item.src"
+                :reverse-transition="currentTransition"
+                :transition="currentTransition"
+                cover
+              />
+            </v-carousel>
+          </div>
         </v-col>
       </v-row>
     </v-container>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import { shallowRef } from "vue";
+import grand from "@/assets/grand.jpg";
+import sanfran from "@/assets/sanfran.jpg";
+import ski from "@/assets/ski.jpg";
+import stratcher from "@/assets/stratcher.jpg";
+import map from "@/assets/map.jpg";
 
-<style></style>
+const mode = shallowRef("images");
+const currentTransition = shallowRef("crossfade");
+
+const items = [
+  { src: grand },
+  { src: sanfran },
+  { src: ski },
+  { src: stratcher },
+  { src: map },
+];
+</script>
+
+<style>
+.hobbies {
+  color: var(--main-text-secondary);
+}
+
+.hobbiesHeadline {
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.crossfade-carousel > .v-window__container {
+  isolation: isolate;
+  > .v-window-item {
+    mix-blend-mode: plus-lighter;
+  }
+}
+
+.crossfade-enter-active,
+.crossfade-leave-active {
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+.crossfade-leave-from,
+.crossfade-leave-to {
+  position: absolute !important;
+  top: 0;
+  width: 100%;
+}
+
+.crossfade-enter-from,
+.crossfade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -14,10 +14,10 @@
         class="theme-button"
         icon
         @click="toggleTheme"
-        color="var(--icons-bright)"
+        color="var(--theme)"
       >
         <v-icon>{{
-          isDark ? "mdi-white-balance-sunny" : "mdi-weather-night"
+          isLight ? "mdi-weather-night" : "mdi-white-balance-sunny"
         }}</v-icon>
       </v-btn>
     </template>
@@ -95,16 +95,17 @@ const show = () => {
 };
 
 // Theme toggle logic
-const isDark = ref(true);
+const isLight = ref(true);
 
 const toggleTheme = () => {
-  isDark.value = !isDark.value;
-  document.body.classList.toggle("theme-dark", isDark.value);
-  document.body.classList.toggle("theme-light", !isDark.value);
+  isLight.value = !isLight.value;
+  document.body.classList.toggle("theme-light", isLight.value);
+  document.body.classList.toggle("theme-dark", !isLight.value);
 };
 
 if (typeof window !== "undefined") {
   document.body.classList.add("theme-light");
+  document.body.classList.remove("theme-dark");
 }
 
 const navigateToAboutMe = () => {
