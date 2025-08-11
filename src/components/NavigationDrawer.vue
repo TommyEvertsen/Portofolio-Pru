@@ -121,7 +121,7 @@ const navigateToHome = () => {
 };
 
 const navigateToEducation = () => {
-  router.push({ name: "education" }).then(() => {
+  router.push({ name: "/Education" }).then(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
@@ -172,7 +172,7 @@ const mainlinks = [
   {
     title: "Projects",
     icon: "mdi-file-table-outline",
-    value: "education",
+    value: "projects",
     click: navigateToEducation,
   },
 ];

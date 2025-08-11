@@ -88,7 +88,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col xl="4" lg="4" md="4" sm="12">
+        <v-col cols="12" xl="4" lg="4" md="12" sm="12">
           <div class="hobbies">
             <h2 class="hobbiesHeadline">My hobbies</h2>
             <p>
@@ -97,7 +97,7 @@
             </p>
           </div>
         </v-col>
-        <v-col xl="8" lg="8" md="8" sm="12">
+        <v-col cols="12" xl="8" lg="8" md="12" sm="12">
           <div>
             <v-carousel
               height="600px"

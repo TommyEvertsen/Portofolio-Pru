@@ -4,7 +4,7 @@
       <v-row class="mb-10 mt-5">
         <v-col xl="6" lg="6" md="6" sm="12">
           <div class="publicationText">
-            <h1 class="publicationTextHeadline">Publications</h1>
+            <h1 class="publicationTextHeadline">- Publications -</h1>
             <p>
               Through my study and work i have published several articles on
               circular economy
