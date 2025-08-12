@@ -87,4 +87,65 @@
 // No logic needed for static contact page
 </script>
 
-<style scoped></style>
+<style>
+/* Contact page */
+.contact-main {
+  background: var(--main);
+  min-height: 100vh;
+  padding-top: 32px;
+}
+
+.contact-card {
+  background: var(--main-context) !important;
+  border-radius: 18px !important;
+  border: 4px solid var(--main-secondary) !important;
+  color: var(--main-text) !important;
+  box-shadow: 0 8px 40px rgba(201, 161, 59, 0.12);
+}
+
+.contact-title {
+  color: var(--main-text-secondary);
+  font-size: 2rem;
+  font-family: "Carattere", cursive;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: var(--main-text);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  color: var(--main-button);
+}
+
+.contact-btn:hover {
+  background: var(--main-button-hover) !important;
+  color: var(--main-button-hover-text) !important;
+}
+
+.contact-social-label {
+  color: var(--main-text-secondary) !important;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-links {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.contact-links > a {
+  color: var(--icons-bright) !important;
+}
+</style>

@@ -41,4 +41,41 @@ const items = [
 ];
 </script>
 
-<style></style>
+<style>
+/* Footer */
+.app-footer {
+  background: var(--main) !important;
+  color: var(--main-secondary);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  color: var(--main-secondary) !important;
+}
+
+.social-link {
+  color: var(--icons-dark) !important;
+  transition: color 0.2s;
+}
+
+.social-link :deep(.v-icon):hover {
+  color: var(--main-secondary) !important;
+}
+
+.footer-text {
+  color: var(--main-secondary);
+  font-size: 0.95rem;
+}
+
+.footer-text > a {
+  color: var(--main-secondary);
+  font-size: 0.95rem;
+}
+</style>
