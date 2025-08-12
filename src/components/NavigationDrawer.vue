@@ -115,7 +115,7 @@ const navigateToAboutMe = () => {
 };
 
 const navigateToHome = () => {
-  router.push({ name: "/Home" }).then(() => {
+  router.push({ name: "/" }).then(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 };
@@ -214,4 +214,38 @@ const otherLinks = [
 ];
 </script>
 
-<style></style>
+<style>
+/* App bar */
+.v-toolbar {
+  background-color: var(--main-grey);
+}
+
+.v-navigation-drawer {
+  border-right: 1px solid var(--main-text-secondary) !important;
+}
+
+.v-app-bar-title {
+  color: var(--main-text);
+}
+
+.v-list-item-title {
+  color: var(--text-headline);
+}
+
+.v-list-item__prepend {
+  color: var(--icons-secondary);
+}
+
+.v-list-item-subtitle {
+  color: var(--text-headline);
+}
+
+.v-divider {
+  border-width: 1.2px;
+  color: var(--text-headline);
+}
+
+.v-list-item.v-list-item--active {
+  background-color: var(--active) !important;
+}
+</style>

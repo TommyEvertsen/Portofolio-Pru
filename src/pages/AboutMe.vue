@@ -176,4 +176,63 @@ const items = [
 .crossfade-leave-to {
   opacity: 0;
 }
+
+/* About me page */
+
+.avatar-shadow {
+  box-shadow: 0 4px 24px rgba(201, 161, 59, 0.25);
+}
+
+.about-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-headline);
+  margin-bottom: 0.2rem;
+}
+
+.about-title {
+  color: var(--main-secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.about-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+  color: var(--main-text-secondary) !important;
+}
+
+.about-card {
+  background: var(--main-context) !important;
+  border-radius: 18px !important;
+  border: 4px solid var(--main-secondary) !important;
+  color: var(--main-text) !important;
+  box-shadow: 0 8px 40px rgba(201, 161, 59, 0.12);
+}
+
+.section-title {
+  color: var(--main-text-secondary);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.about-card ul {
+  margin-bottom: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.about-card li {
+  margin-bottom: 0.5rem;
+  color: var(--main-text);
+}
+
+.about-card a {
+  color: var(--main-text) !important;
+  text-decoration: underline;
+}
 </style>
