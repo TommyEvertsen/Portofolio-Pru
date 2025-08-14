@@ -31,7 +31,7 @@
                 class="infoCard-btn"
                 variant="outlined"
                 prepend-icon="mdi-web"
-                @click="$router.push({ name: 'contact' })"
+                @click="navigateToEducation"
               >
                 Information
               </v-btn>
@@ -51,7 +51,7 @@
                 class="infoCard-btn"
                 variant="outlined"
                 prepend-icon="mdi-web"
-                @click="$router.push({ name: 'contact' })"
+                @click="navigateToPublications"
               >
                 Publications
               </v-btn>
@@ -83,6 +83,18 @@ import { useDisplay } from "vuetify";
 
 const { mdAndUp } = useDisplay();
 const { smAndDown } = useDisplay();
+
+const navigateToPublications = () => {
+  router.push({ name: "/Publications" }).then(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+};
+
+const navigateToEducation = () => {
+  router.push({ name: "/Education" }).then(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+};
 </script>
 
 <style>
