@@ -17,6 +17,7 @@
   --icons-dark: #c9a13b;
   --theme: #ff8c00;
   --active: #303030;
+  --card-title: #e5e5cb;
 }
 
 .theme-light {
@@ -38,6 +39,10 @@
 }
 
 main {
+  background-color: var(--main);
+}
+
+.v-application__wrap {
   background-color: var(--main);
 }
 

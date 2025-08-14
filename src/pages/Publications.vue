@@ -17,7 +17,7 @@
         </v-col>
       </v-row>
 
-      <v-row>
+      <v-row class="flex justify-center">
         <v-timeline
           line-color="var(--main-text-secondary)"
           direction="vertical"
@@ -76,78 +76,6 @@
             </v-card>
           </v-timeline-item>
         </v-timeline>
-        <!-- <v-row dense>
-        <v-col
-          v-for="(pub, i) in publications"
-          :key="i"
-          cols="12"
-          xl="4"
-          lg="4"
-          md="4"
-          sm="12"
-        >
-          <v-card
-            class="mx-auto mb-6 cardContainer"
-            max-width="400"
-            elevation="16"
-          >
-            <v-card-title class="text-h5">
-              {{ pub.type }}
-            </v-card-title>
-            <v-card-subtitle> Published: {{ pub.publisher }} </v-card-subtitle>
-            <v-card-text class="card-abstract">
-              {{ pub.title }}
-            </v-card-text>
-            <v-card-actions>
-              <v-dialog max-width="500">
-                <template v-slot:activator="{ props: activatorProps }">
-                  <v-btn
-                    color="var(--main-button)"
-                    v-bind="activatorProps"
-                    text="Abstrakt"
-                    variant="outlined"
-                  ></v-btn>
-                  <v-btn
-                    color="var(--main-button)"
-                    text="Link"
-                    variant="outlined"
-                    :href="publication.link"
-                  >
-                  </v-btn>
-                </template>
-
-                <template v-slot:default="{ isActive }">
-                  <v-card class="abstractCard">
-                    <v-card-title class="text-h5">
-                      {{ pub.title }}
-                    </v-card-title>
-                    <v-card-text> {{ pub.abstract }} </v-card-text>
-
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-
-                      <v-btn
-                        color="var(--main-button)"
-                        variant="outlined"
-                        text="Lukk"
-                        @click="isActive.value = false"
-                      ></v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </template>
-              </v-dialog>
-            </v-card-actions>
-            <v-expand-transition>
-              <div v-show="pub.show">
-                <v-divider></v-divider>
-                <v-card-text>
-                  {{ pub.abstract }}
-                </v-card-text>
-              </div>
-            </v-expand-transition>
-          </v-card>
-        </v-col>
-      </v-row> -->
       </v-row>
     </v-container>
   </main>

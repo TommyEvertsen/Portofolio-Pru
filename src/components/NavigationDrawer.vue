@@ -138,6 +138,12 @@ const navigateToPublications = () => {
   });
 };
 
+const navigateToProjects = () => {
+  router.push({ name: "/Projects" }).then(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+};
+
 const mainlinks = [
   {
     title: "Home",
@@ -173,7 +179,7 @@ const mainlinks = [
     title: "Projects",
     icon: "mdi-file-table-outline",
     value: "projects",
-    click: navigateToEducation,
+    click: navigateToProjects,
   },
 ];
 
