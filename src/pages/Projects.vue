@@ -81,10 +81,10 @@ const projects = [
   background-color: var(--main-context);
 }
 .cardTitle {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
 }
 
 .cardText {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
 }
 </style>
