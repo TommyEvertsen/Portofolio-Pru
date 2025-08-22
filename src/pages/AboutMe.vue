@@ -1,8 +1,8 @@
 <template>
   <main>
     <v-container>
-      <v-row class="justify-center mb-8">
-        <v-col cols="12" md="4" class="text-center">
+      <v-row class="mb-8">
+        <v-col cols="12" xl="4" lg="4" md="4" sm="12" class="text-center mt-10">
           <v-avatar size="180" class="avatar-shadow mb-4">
             <v-img src="/src/assets/pru.jpg" cover></v-img>
           </v-avatar>
@@ -37,6 +37,13 @@
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
           </div>
+
+          <!--  <canvas
+            id="about-bar-chart"
+            width="320"
+            height="200"
+            style="margin-top: 2rem"
+          ></canvas> -->
         </v-col>
         <v-col cols="12" md="8">
           <v-sheet
@@ -45,43 +52,57 @@
           >
             <h3 class="section-title">Hey there! 👋</h3>
             <p>
-              I'm Pru—a Norwegian-Vietnamese researcher, digital circular
-              economy enthusiast, and proud mom. I spend my days at SINTEF,
-              mixing business, tech, and sustainability, and my evenings chasing
-              after my little one (born January 2025).
+              Im Pru—a Vietnamese-born Norwegian researcher, digital circular
+              economy enthusiast, and a proud mom. I spend my days working at
+              SINTEF, exchanging research ideas with my colleagues from Norway
+              and Europe, applying for new research grants and doing my
+              research.
             </p>
             <p>
-              My work is all about making the construction industry greener,
-              smarter, and more collaborative. I love exploring new business
-              models, digital innovations, and how people and tech can work
-              together for a better future.
+              My work is all about making the sectors be more circular, smarter,
+              and more collaborative. I love exploring new business models,
+              digital innovations, and technologies that unlock opportunities
+              for a circular economy.
             </p>
             <p>
-              <strong>What gets me excited?</strong> Digital innovation,
-              circular economy, sustainability, and seeing ideas turn into real
-              impact. I geek out over econometrics, regression analysis, and
-              case studies—but I also enjoy a good story and a strong coffee.
+              <strong>What gets me excited?</strong> excited? Digital
+              innovation, circular economy, sustainability, and seeing ideas
+              turn into real impact. I do quantitative and qualitative methods,
+              including econometrics, regression analysis, and case studies. I
+              also enjoy a good story and a café latte.
             </p>
             <h3 class="section-title mt-6">A Few Fun Facts</h3>
             <ul>
               <li>Born: 26.11.1989 (Sagittarius, if you’re into that!)</li>
+              <li>
+                My hometown: Ho Chi Minh City (Saigon), Vietnam (10 million
+                population, a lot of skyscrapers and motorbikes will overwhelm
+                you!)
+              </li>
               <li>Languages: Vietnamese, Norwegian, English (and baby talk)</li>
-              <li>Family: Married, one awesome kid</li>
+              <li>Family: Happily married, one baby.</li>
               <li>Nationalities: Norwegian & Vietnamese</li>
             </ul>
             <h3 class="section-title mt-6">My Journey</h3>
             <ul>
+              <li>Researcher (Forsker II) at SINTEF Community.</li>
               <li>
-                PhD in Business Administration (Entrepreneurship & Innovation)
-                from Nord University, Norway
+                PhD in Business (Entrepreneurship & Innovation) at Nord
+                University, Norway
               </li>
               <li>
-                Master’s in Business Innovation from University of Stavanger
+                Master of Science in Business Administration (Innovation
+                Studies) at the University of Stavanger, Norway
               </li>
-              <li>Once upon a time: Account Manager in Saigon, Vietnam</li>
               <li>
-                Visited Arizona State University & University of Bologna as a
-                researcher (and tried all the local food!)
+                Once upon a time: Account Manager &amp; bachelor’s degree in
+                marketing in Saigon, Vietnam.
+              </li>
+              <li>A former member of the AIESEC organisation.</li>
+              <li>
+                Visiting scholar at Arizona State University & University of
+                Bologna (and explored Grand Canyon, Arizona deserts, the Bay
+                area and Mediterranean foods)
               </li>
             </ul>
           </v-sheet>
@@ -90,10 +111,16 @@
       <v-row>
         <v-col cols="12" xl="4" lg="4" md="12" sm="12">
           <div class="hobbies">
-            <h2 class="hobbiesHeadline">My hobbies</h2>
+            <h2 class="hobbiesHeadline text-center">- My hobbies -</h2>
             <p>
-              My hobbies include traveling, painting eating food and eating
-              food. Stratcher fill out
+              I love travelling the world and experiencing beautiful and unique
+              cultures. I love to stay in homestay and experience the place as a
+              local and try new local foods. I am a foodie (oh seafood!) who
+              also loves to make food for my family, my friends and myself. I
+              like outdoor activities like camping, roadtrips, cabin trips, and
+              try skiing (I am still quite a noob in skiing but my braking skill
+              seems to get better ). I also like to paint and decorate my house
+              and garden!
             </p>
           </div>
         </v-col>
@@ -129,6 +156,9 @@ import sanfran from "@/assets/sanfran.jpg";
 import ski from "@/assets/ski.jpg";
 import stratcher from "@/assets/stratcher.jpg";
 import map from "@/assets/map.jpg";
+import Chart from "chart.js/auto";
+import { onMounted } from "vue";
+import { color } from "chart.js/helpers";
 
 const mode = shallowRef("images");
 const currentTransition = shallowRef("crossfade");
@@ -140,11 +170,62 @@ const items = [
   { src: stratcher },
   { src: map },
 ];
+
+const labels = ["2021", "2022", "2023", "2024", "2025"];
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: "Citations",
+      data: [1, 23, 53, 92, 76],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.2)",
+        "rgba(255, 159, 64, 0.2)",
+        "rgba(255, 205, 86, 0.2)",
+        "rgba(75, 192, 192, 0.2)",
+        "rgba(54, 162, 235, 0.2)",
+        "rgba(153, 102, 255, 0.2)",
+        "rgba(201, 203, 207, 0.2)",
+      ],
+      borderColor: [
+        "rgb(255, 99, 132)",
+        "rgb(255, 159, 64)",
+        "rgb(255, 205, 86)",
+        "rgb(75, 192, 192)",
+        "rgb(54, 162, 235)",
+        "rgb(153, 102, 255)",
+        "rgb(201, 203, 207)",
+      ],
+      color: ["rgba(201, 203, 207, 0.2)"],
+      borderWidth: 1,
+    },
+  ],
+};
+
+const config = {
+  type: "bar",
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+};
+
+onMounted(() => {
+  const ctx = document.getElementById("about-bar-chart");
+  if (ctx) {
+    new Chart(ctx, config);
+  }
+});
 </script>
 
 <style>
 .hobbies {
   color: var(--main-text-secondary);
+  font-family: "Libre Baskerville", serif;
 }
 
 .hobbiesHeadline {
@@ -188,6 +269,7 @@ const items = [
   font-weight: 700;
   color: var(--text-headline);
   margin-bottom: 0.2rem;
+  font-family: "Libre Baskerville", serif;
 }
 
 .about-title {
@@ -195,6 +277,7 @@ const items = [
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  font-family: "Libre Baskerville", serif;
 }
 
 .about-links {
@@ -211,14 +294,17 @@ const items = [
   border: 4px solid var(--main-secondary) !important;
   color: var(--main-text) !important;
   box-shadow: 0 8px 40px rgba(201, 161, 59, 0.12);
+  padding: 1rem;
+  font-family: "Libre Baskerville", serif;
 }
 
 .section-title {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
+  font-family: "Libre Baskerville", serif;
 }
 
 .about-card ul {

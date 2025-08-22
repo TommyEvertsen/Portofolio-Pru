@@ -20,17 +20,17 @@
             dot-color="var(--icons-dark)"
           >
             <v-timeline-item>
-              <template v-slot:opposite> 2016 </template>
-              Started master in Saigon
+              <template v-slot:opposite> 2011 </template>
+              Bachelor in Ho chi minh university
             </v-timeline-item>
 
             <v-timeline-item>
-              <template v-slot:opposite>Finished master UIS </template>
+              <template v-slot:opposite> master in UIS </template>
               2018
             </v-timeline-item>
 
             <v-timeline-item>
-              <template v-slot:opposite> 2021 </template>
+              <template v-slot:opposite> 2023 </template>
               PHD Nord university
             </v-timeline-item>
           </v-timeline>
@@ -38,61 +38,43 @@
       </v-row>
       <v-row class="mt-10">
         <div class="edu">
-          <h2 class="eduHeadline">- University Saigon</h2>
-          <p>I studied econmoy in university of saigon.</p>
+          <h2 class="eduHeadline">- Ho chi minh city university</h2>
+          <p>Bachelor in buisness administration.</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            sit amet risus pellentesque, fermentum mi id, tempor dolor. Proin eu
-            sem vitae purus pulvinar semper et et lectus. Praesent et
-            sollicitudin nunc, viverra ultricies lorem. Nullam et nibh ac eros
-            mattis finibus eu rutrum mauris. Etiam porttitor non lacus a
-            ultrices. Nulla tincidunt maximus turpis. Etiam eu mi a ante viverra
-            viverra et vitae massa. Vestibulum eu laoreet nibh. Morbi volutpat
-            consequat rhoncus. Donec nunc risus, ornare vel aliquet vitae,
-            eleifend vel massa. Mauris ullamcorper tincidunt ex sed blandit.
-            Vivamus vel lacus id magna lacinia egestas nec ut ante. In volutpat
-            turpis et semper tincidunt. Mauris hendrerit purus ipsum, non
-            viverra ex accumsan ac.
+            During my undergraduate studies in Saigon, Vietnam, I developed a
+            strong foundation in business principles, marketing, and management.
+            My time at Ho Chi Minh City University allowed me to gain practical
+            experience and cultural insights that have shaped my approach to
+            business and research
           </p>
         </div>
       </v-row>
       <v-row class="mt-10">
         <div class="edu">
           <h2 class="eduHeadline">- University of Stavanger</h2>
-          <p>I finished my masters in University of Stavanger.</p>
+          <p>Masters in Economic and buisness administration.</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            sit amet risus pellentesque, fermentum mi id, tempor dolor. Proin eu
-            sem vitae purus pulvinar semper et et lectus. Praesent et
-            sollicitudin nunc, viverra ultricies lorem. Nullam et nibh ac eros
-            mattis finibus eu rutrum mauris. Etiam porttitor non lacus a
-            ultrices. Nulla tincidunt maximus turpis. Etiam eu mi a ante viverra
-            viverra et vitae massa. Vestibulum eu laoreet nibh. Morbi volutpat
-            consequat rhoncus. Donec nunc risus, ornare vel aliquet vitae,
-            eleifend vel massa. Mauris ullamcorper tincidunt ex sed blandit.
-            Vivamus vel lacus id magna lacinia egestas nec ut ante. In volutpat
-            turpis et semper tincidunt. Mauris hendrerit purus ipsum, non
-            viverra ex accumsan ac.
+            At the University of Stavanger in Norway, I specialized in
+            innovation studies. My master’s program deepened my understanding of
+            sustainable business models and the role of innovation in driving
+            economic growth. This experience also introduced me to international
+            perspectives and collaborative research.
           </p>
         </div>
       </v-row>
       <v-row class="mt-10">
         <div class="edu">
           <h2 class="eduHeadline">- Nord university</h2>
-          <p>I took PHD in circular econmy at Nord university.</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            sit amet risus pellentesque, fermentum mi id, tempor dolor. Proin eu
-            sem vitae purus pulvinar semper et et lectus. Praesent et
-            sollicitudin nunc, viverra ultricies lorem. Nullam et nibh ac eros
-            mattis finibus eu rutrum mauris. Etiam porttitor non lacus a
-            ultrices. Nulla tincidunt maximus turpis. Etiam eu mi a ante viverra
-            viverra et vitae massa. Vestibulum eu laoreet nibh. Morbi volutpat
-            consequat rhoncus. Donec nunc risus, ornare vel aliquet vitae,
-            eleifend vel massa. Mauris ullamcorper tincidunt ex sed blandit.
-            Vivamus vel lacus id magna lacinia egestas nec ut ante. In volutpat
-            turpis et semper tincidunt. Mauris hendrerit purus ipsum, non
-            viverra ex accumsan ac.
+            PHD in buisness administration (Innovation and Entrepreneurship).
+          </p>
+          <p>
+            My doctoral research at Nord University focused on circular economy,
+            innovation, and entrepreneurship. I explored strategies for resource
+            efficiency and sustainable development, contributing to academic
+            knowledge and practical solutions for a more resilient future. My
+            PhD journey has been driven by curiosity, collaboration, and a
+            passion for impactful research.
           </p>
         </div>
       </v-row>
@@ -121,5 +103,14 @@
   font-family: "Carattere", cursive;
   font-size: 2.6rem;
   font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .education {
+    text-align: center;
+  }
+  .eduHeadline {
+    text-align: center;
+  }
 }
 </style>
