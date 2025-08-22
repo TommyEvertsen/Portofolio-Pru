@@ -2,80 +2,134 @@
   <main>
     <v-container>
       <v-row class="mb-10 mt-5">
-        <v-col xl="6" lg="6" md="6" sm="12">
+        <v-col cols="12" xl="4" lg="4" md="4" sm="12">
           <div class="publicationText">
             <h1 class="publicationTextHeadline">- Publications -</h1>
             <p>
-              Through my study and work i have published several articles on
-              circular economy
+              Through my PhD study and my work, I have published several
+              articles in management studies and circular economy.
             </p>
-            <p>Stratcher fill out</p>
+            <p class="mt-5"><strong>My upcoming research papers:</strong></p>
+            <ul class="mt-2 no-list-style">
+              <li class="mt-2">
+                - Reuse and design for disassembly: A sustainability transition
+                toward circular construction.
+              </li>
+              <li class="mt-2">
+                - The archetype and resource management of material reuse in the
+                circular construction.
+              </li>
+            </ul>
           </div>
         </v-col>
-        <v-col xl="6" lg="6" md="6" sm="12"
-          ><v-img src="@/assets/pru2.jpg" max-height="600px"> </v-img>
+        <v-col cols="12" xl="8" lg="8" md="8" sm="12">
+          <v-img :src="pub" max-height="800px"> </v-img>
         </v-col>
       </v-row>
 
       <v-row class="flex justify-center">
-        <v-timeline
-          line-color="var(--main-text-secondary)"
-          direction="vertical"
-        >
-          <v-timeline-item
-            v-for="(publication, i) in publications"
-            :key="i"
-            :dot-color="publication.color"
-            :icon="publication.icon"
-            fill-dot
-            elevation="16"
-            max-width="600px"
-            min-width="600px"
+        <v-col cols="12" xl="12" lg="12" md="12" sm="12">
+          <h1 class="publicationTextTimeline mt-5 mb-5">
+            - Publications timeline -
+          </h1>
+          <v-timeline
+            v-if="mdAndUp"
+            line-color="var(--main-text-secondary)"
+            direction="vertical"
           >
-            <v-card>
-              <v-card-title :class="['text-h6', `bg-${publication.color}`]">
-                {{ publication.type }}
-              </v-card-title>
-              <v-card-text class="bg-white text--primary text-lg">
-                <p style="font-size: 1rem">
-                  {{ publication.title }}
-                </p>
-              </v-card-text>
-              <v-card-actions class="bg-white text--primary">
-                <v-dialog max-width="500">
-                  <template v-slot:activator="{ props: activatorProps }">
-                    <v-btn
-                      :color="publication.color"
-                      v-bind="activatorProps"
-                      text="Abstrakt"
-                      variant="outlined"
-                    ></v-btn>
-                  </template>
+            <v-timeline-item
+              v-for="(publication, i) in publications"
+              :key="i"
+              :dot-color="publication.color"
+              :icon="publication.icon"
+              fill-dot
+              elevation="16"
+              max-width="600px"
+              min-width="600px"
+            >
+              <v-card>
+                <v-card-title :class="['text-h6', `bg-${publication.color}`]">
+                  {{ publication.type }}
+                </v-card-title>
+                <v-card-text class="bg-white text--primary text-lg">
+                  <p style="font-size: 1rem">
+                    {{ publication.title }}
+                  </p>
+                </v-card-text>
+                <v-card-actions class="bg-white text--primary">
+                  <v-btn
+                    variant="outlined"
+                    prepend-icon="mdi-web"
+                    :href="publication.link"
+                    target="_blank"
+                    rel="noopener"
+                    v-if="publication.link"
+                  >
+                    Link to publication
+                  </v-btn>
 
-                  <template v-slot:default="{ isActive }">
-                    <v-card class="abstractCard">
-                      <v-card-title>
-                        {{ publication.title }}
-                      </v-card-title>
-                      <v-card-text> {{ publication.abstract }} </v-card-text>
+                  <!--  <v-dialog max-width="500">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-btn
+                        :color="publication.color"
+                        v-bind="activatorProps"
+                        text="Abstrakt"
+                        variant="outlined"
+                      ></v-btn>
+                    </template>
 
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
+                    <template v-slot:default="{ isActive }">
+                      <v-card class="abstractCard">
+                        <v-card-title>
+                          {{ publication.title }}
+                        </v-card-title>
+                        <v-card-text> {{ publication.abstract }} </v-card-text>
 
-                        <v-btn
-                          color="var(--main-button)"
-                          variant="outlined"
-                          text="Lukk"
-                          @click="isActive.value = false"
-                        ></v-btn>
-                      </v-card-actions>
-                    </v-card>
-                  </template>
-                </v-dialog>
-              </v-card-actions>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+
+                          <v-btn
+                            color="var(--main-button)"
+                            variant="outlined"
+                            text="Lukk"
+                            @click="isActive.value = false"
+                          ></v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </template>
+                  </v-dialog> -->
+                </v-card-actions>
+              </v-card>
+            </v-timeline-item>
+          </v-timeline>
+
+          <v-card
+            v-if="smAndDown"
+            v-for="(publication, i) in publications"
+            class="mx-auto mb-6 cardContainer"
+            max-width="400"
+            elevation="16"
+            color="var(--main-context)"
+          >
+            <v-card-title class="text-h5 cardTitle">
+              {{ publication.type }}
+            </v-card-title>
+            <v-card-subtitle class="cardText">
+              <a
+                :href="publication.link"
+                target="_blank"
+                rel="noopener"
+                v-if="publication.link"
+              >
+                {{ publication.link }}
+              </a>
+            </v-card-subtitle>
+            <v-card-text class="cardText">
+              {{ publication.title }}
+            </v-card-text>
+            <v-card-actions> </v-card-actions>
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
   </main>
@@ -83,6 +137,12 @@
 
 <script setup>
 import { ref } from "vue";
+import { useDisplay } from "vuetify";
+import { md } from "vuetify/iconsets/md";
+import pub from "@/assets/publications.jpg";
+
+const { smAndDown } = useDisplay();
+const { mdAndUp } = useDisplay();
 
 const publications = ref([
   {
@@ -184,15 +244,36 @@ const publications = ref([
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: large !important;
+  font-family: "Libre Baskerville", serif;
 }
 
 .publicationText {
   color: var(--main-text-secondary);
+  font-family: "Libre Baskerville", serif;
 }
 
 .publicationTextHeadline {
   font-family: "Carattere", cursive;
   font-size: 3rem;
   font-weight: 400;
+}
+.no-list-style {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.publicationTextTimeline {
+  color: var(--main-text-secondary);
+  font-family: "Carattere", cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .publicationTextHeadline {
+    text-align: center;
+  }
 }
 </style>

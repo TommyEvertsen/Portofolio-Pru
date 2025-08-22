@@ -7,7 +7,7 @@
       ></v-app-bar-nav-icon>
     </template>
 
-    <v-app-bar-title>{{ $route.meta.title || "Home" }} </v-app-bar-title>
+    <v-app-bar-title>{{ appBarTitle }}</v-app-bar-title>
 
     <template v-slot:append>
       <v-btn
@@ -84,11 +84,12 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
-import { useRouter } from "vue-router";
+import { ref, watch, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 const drawer = ref(false);
 const router = useRouter();
+const route = useRoute();
 
 const show = () => {
   drawer.value = !drawer.value;
@@ -175,12 +176,12 @@ const mainlinks = [
     value: "Publications",
     click: navigateToPublications,
   },
-  {
+  /*  {
     title: "Projects",
     icon: "mdi-file-table-outline",
     value: "projects",
     click: navigateToProjects,
-  },
+  }, */
 ];
 
 /* const subLinks = [
@@ -218,6 +219,17 @@ const otherLinks = [
     rel: "noopener noreferrer",
   },
 ];
+
+const routeTitles = {
+  "/": "Home",
+  "/AboutMe": "About Me",
+  "/Contact": "Contact",
+  "/Education": "Education",
+  "/Projects": "Projects",
+  "/Publications": "Publications",
+};
+
+const appBarTitle = computed(() => routeTitles[route.name] || "Home");
 </script>
 
 <style>

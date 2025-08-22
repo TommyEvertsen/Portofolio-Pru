@@ -15,7 +15,7 @@
     </div>
     <div class="footer-text">
       &copy; {{ new Date().getFullYear() }}
-      <a href="vg.no">Tommy Huynh Evertsen</a>
+      <a>Phuc Huynh Evertsen</a>
     </div>
   </v-footer>
 </template>

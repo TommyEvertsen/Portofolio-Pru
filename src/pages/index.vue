@@ -22,10 +22,16 @@
             <v-sheet class="info-card business-card">
               <h1 class="card-title text-center">Business</h1>
               <p class="card-desc">
-                I hold a Master's degree in Business. My research focus on
-                sustainable business models, innovation, and the intersection of
-                commerce and circular economy. I am passionate about driving
-                change through responsible business practices.
+                I have always been interested in business. When I was a kid, I
+                initiated my little business at 12 years old by selling selected
+                music DVDs and crafted products to my classmates. Moving to
+                Norway, I took my master’s degree in business with
+                specialisation in innovation studies at UiS. From there, my
+                passion for business and management research has been ignited.
+                My research focuses on business models, innovation, and
+                entrepreneurship in the intersection of the circular economy. I
+                am passionate about driving the circular economy and sustainable
+                business.
               </p>
               <v-btn
                 class="infoCard-btn"
@@ -45,7 +51,13 @@
                 As a PhD researcher in Circular Economy, I explore strategies
                 for resource efficiency, waste reduction, and sustainable
                 development. My work aims to create impactful solutions for a
-                more resilient and regenerative future.
+                more resilient and regenerative future. I started my research in
+                the circular economy 7 years ago when the concept had just
+                emerged. As a PhD researcher in Circular Economy, I explore
+                strategies, such as how actors collaborate in circular
+                economies, circular business models, and the role of innovations
+                and digital technologies in circular economies and circular
+                startups.
               </p>
               <v-btn
                 class="infoCard-btn"
