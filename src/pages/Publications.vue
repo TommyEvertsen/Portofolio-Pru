@@ -34,7 +34,7 @@
           </h1>
           <v-timeline
             v-if="mdAndUp"
-            line-color="var(--main-text-secondary)"
+            line-color="var(--main-text)"
             direction="vertical"
           >
             <v-timeline-item
@@ -248,7 +248,7 @@ const publications = ref([
 }
 
 .publicationText {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
   font-family: "Libre Baskerville", serif;
 }
 
@@ -264,7 +264,7 @@ const publications = ref([
 }
 
 .publicationTextTimeline {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
   font-family: "Carattere", cursive;
   font-size: 3rem;
   font-weight: 400;

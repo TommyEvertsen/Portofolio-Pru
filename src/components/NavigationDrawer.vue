@@ -145,6 +145,12 @@ const navigateToProjects = () => {
   });
 };
 
+const navigateToTeaching = () => {
+  router.push({ name: "/Teaching" }).then(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+};
+
 const mainlinks = [
   {
     title: "Home",
@@ -175,6 +181,12 @@ const mainlinks = [
     icon: "mdi-text-box-outline",
     value: "Publications",
     click: navigateToPublications,
+  },
+  {
+    title: "Teaching",
+    icon: "mdi-human-male-board",
+    value: "Teaching",
+    click: navigateToTeaching,
   },
   /*  {
     title: "Projects",
@@ -243,7 +255,7 @@ const appBarTitle = computed(() => routeTitles[route.name] || "Home");
 }
 
 .v-app-bar-title {
-  color: var(--main-text);
+  color: var(--main-text-secondary);
 }
 
 .v-list-item-title {

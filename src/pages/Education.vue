@@ -15,68 +15,214 @@
         <v-col cols="12" xl="8" lg="8" md="8" sm="12">
           <v-timeline
             direction="horizontal"
-            style="color: var(--main-text-secondary)"
-            line-color="var(--main-text-secondary)"
+            style="color: var(--main-text)"
+            line-color="var(--main-text)"
             dot-color="var(--icons-dark)"
           >
             <v-timeline-item>
               <template v-slot:opposite> 2011 </template>
-              Bachelor in Ho chi minh university
+              Bachelor's degree in Business Administration (Marketing)
             </v-timeline-item>
 
             <v-timeline-item>
-              <template v-slot:opposite> master in UIS </template>
+              <template v-slot:opposite>
+                Master's degree in Business Administration (Innovation)
+              </template>
               2018
             </v-timeline-item>
 
             <v-timeline-item>
               <template v-slot:opposite> 2023 </template>
-              PHD Nord university
+              Ph.D. in Business
             </v-timeline-item>
           </v-timeline>
         </v-col>
       </v-row>
+
       <v-row class="mt-10">
-        <div class="edu">
-          <h2 class="eduHeadline">- Ho chi minh city university</h2>
-          <p>Bachelor in buisness administration.</p>
-          <p>
-            During my undergraduate studies in Saigon, Vietnam, I developed a
-            strong foundation in business principles, marketing, and management.
-            My time at Ho Chi Minh City University allowed me to gain practical
-            experience and cultural insights that have shaped my approach to
-            business and research
-          </p>
-        </div>
+        <v-col cols="12">
+          <div class="edu">
+            <h2 class="eduHeadline">Nord university 2019-2023</h2>
+            <strong>PHD in buisness.</strong>
+            <p class="mt-4">
+              I took my PhD in Business specializing in innovation, digital
+              transformation, and the circular economy, with a dissertation on
+              how digital technologies enable sustainable and circular business
+              models. My doctoral training combined coursework in quantitative
+              and qualitative research methods, philosophy of social sciences,
+              and innovation studies, alongside electives in AI and digitization
+              and advanced statistical techniques. My doctoral thesis, Digital
+              Innovations for the Circular Economy (2023), explored how digital
+              technologies and innovation processes can enable more sustainable
+              and circular business models. The work was evaluated and approved
+              by an international committee of scholars from Norway, Denmark,
+              and the United Kingdom.
+            </p>
+
+            <div class="mt-4 mx-2">
+              <ol>
+                <li>Compulsory Courses</li>
+                <ul>
+                  <li>
+                    Quantitative Research Methods: Multivariate Statistics (BI
+                    Norwegian Business School) – 6 ECTS
+                  </li>
+                  <li>
+                    Quantitative Research Methods in Innovation Studies
+                    (University of Stavanger) – 5 ECTS
+                  </li>
+                  <li>
+                    Innovation Research – From Origin to Current Frontier
+                    (Norwegian University of Science and Technology) – 7.5 ECTS
+                  </li>
+                  <li>
+                    Philosophy of Social Sciences (University of Stavanger) – 5
+                    ECTS
+                  </li>
+                </ul>
+                <li>Elective Courses</li>
+                <ul>
+                  <li>Qualitative Research Methods – 7.5 ECTS</li>
+                  <li>
+                    Clustering and Scaling of Categorical Data, with
+                    Applications in Business and Social Sciences – 5 ECTS
+                  </li>
+                  <li>
+                    Management of Artificial Intelligence and Digitization – 7.5
+                    ECTS
+                  </li>
+                </ul>
+              </ol>
+            </div>
+          </div>
+        </v-col>
       </v-row>
+
       <v-row class="mt-10">
-        <div class="edu">
-          <h2 class="eduHeadline">- University of Stavanger</h2>
-          <p>Masters in Economic and buisness administration.</p>
-          <p>
-            At the University of Stavanger in Norway, I specialized in
-            innovation studies. My master’s program deepened my understanding of
-            sustainable business models and the role of innovation in driving
-            economic growth. This experience also introduced me to international
-            perspectives and collaborative research.
-          </p>
-        </div>
+        <v-col cols="12">
+          <div class="edu">
+            <h2 class="eduHeadline">University of Stavanger 2016-2018</h2>
+            <strong>
+              Master’s degree in Business Administration (Business Innovation)
+            </strong>
+            <p class="mt-4">
+              I earned a Master’s degree in Business Administration (Business
+              Innovation) from the University of Stavanger in 2018. The two-year
+              program (120 ECTS) provided advanced knowledge of business
+              innovation, economics, and applied finance, combining analytical,
+              managerial, and research- oriented skills. My coursework covered
+              topics such as econometrics, microeconomics, business cycle
+              analysis, innovation management, economics of innovation, and
+              financial statement analysis. The program emphasized both
+              theoretical and applied approaches, including an applied learning
+              experience project. My master’s thesis, Innovation Drivers at the
+              Firm Level: An Empirical Study of the Norwegian Seafood Industry,
+              explored how firms in the seafood sector adopt and drive
+              innovation, contributing to insights into industry-specific
+              innovation dynamics. This degree equipped me with strong skills in
+              economic analysis, innovation management, and applied research,
+              preparing me for both academic research and professional roles in
+              business and management.
+            </p>
+            <div class="mt-4 mx-2">
+              <ol>
+                <li>Core and Major Courses (Business Innovation)</li>
+                <ul>
+                  <li>Econometric Analysis – 10 ECTS</li>
+                  <li>Perspectives on Innovation – 10 ECTS</li>
+                  <li>Economics of Innovation – 10 ECTS</li>
+                  <li>Management of Innovation – 10 ECTS</li>
+                  <li>Microeconomic Analysis – 10 ECTS</li>
+                  <li>Business Cycle Analysis – 10 ECTS</li>
+                  <li>Economics of Motivation – 10 ECTS</li>
+                  <li>Applied Learning Experience – 10 ECTS</li>
+                </ul>
+                <li>Minor (Applied Finance)</li>
+                <ul>
+                  <li>
+                    Financial Statement Analysis and Security Valuation – 10
+                    ECTS
+                  </li>
+                </ul>
+                <li>Master’s Thesis</li>
+                <ul>
+                  <li>
+                    Innovation Drivers at the Firm Level: An Empirical Study of
+                    the Norwegian Seafood Industry – 30 ECTS
+                  </li>
+                </ul>
+              </ol>
+            </div>
+          </div>
+        </v-col>
       </v-row>
+
       <v-row class="mt-10">
-        <div class="edu">
-          <h2 class="eduHeadline">- Nord university</h2>
-          <p>
-            PHD in buisness administration (Innovation and Entrepreneurship).
-          </p>
-          <p>
-            My doctoral research at Nord University focused on circular economy,
-            innovation, and entrepreneurship. I explored strategies for resource
-            efficiency and sustainable development, contributing to academic
-            knowledge and practical solutions for a more resilient future. My
-            PhD journey has been driven by curiosity, collaboration, and a
-            passion for impactful research.
-          </p>
-        </div>
+        <v-col cols="12">
+          <div class="edu">
+            <h2 class="eduHeadline">Ho Chi Minh Open University 2007-2011</h2>
+            <strong>
+              Bachelor in Business Administration (major in Marketing)
+            </strong>
+            <p class="mt-4">
+              I took my bachelor Bachelor’s degree in Business Administration,
+              with a focus on Marketing Management in Vietnam with the Talent
+              Program Department. The program combined core business subjects,
+              marketing-focused courses, and supporting subjects (law,
+              philosophy, computing, English). The program gave me a strong
+              foundation in business administration, economics, quantitative
+              methods, marketing, and communication, while also emphasizing
+              English proficiency and critical social science subjects like
+              philosophy, politics, and law.
+            </p>
+            <div class="mt-4 mx-2">
+              <strong>Key courses</strong>
+              <ul>
+                <li>
+                  Business &amp; Management: Management Studies, Business
+                  Forecasting, Consumer Behaviors &amp; Insights, Communications
+                  in Business
+                </li>
+                <li>
+                  Marketing: Fundamental Marketing, Marketing Management Focus
+                  Courses
+                </li>
+                <li>
+                  Economics &amp; Quantitative Methods: Microeconomics,
+                  Macroeconomics, Advanced Mathematics, Probability &amp;
+                  Statistics, Accounting Principles
+                </li>
+                <li>
+                  Languages &amp; Communication: Advanced English (TOEIC
+                  levels), Business Communications
+                </li>
+                <li>
+                  General Foundations: Political and Social Sciences, General
+                  Laws, Learning Methods
+                </li>
+              </ul>
+              <strong>Key strengths</strong>
+              <ul>
+                <li>
+                  Solid foundation in marketing strategy, consumer behavior, and
+                  business management
+                </li>
+                <li>
+                  Strong quantitative and analytical skills through economics,
+                  accounting, and forecasting courses
+                </li>
+                <li>
+                  Advanced proficiency in English for business and academic
+                  purposes (TOEIC-based courses)
+                </li>
+                <li>
+                  Interdisciplinary training combining business, economics, law,
+                  computing, and philosophy
+                </li>
+              </ul>
+            </div>
+          </div>
+        </v-col>
       </v-row>
     </v-container>
   </main>
@@ -86,7 +232,7 @@
 
 <style>
 .education {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
 }
 
 .educationHeadline {
@@ -96,7 +242,7 @@
 }
 
 .edu {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
 }
 
 .eduHeadline {

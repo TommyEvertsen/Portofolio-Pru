@@ -8,8 +8,8 @@
   --main-button: #3c2a21;
   --main-button-hover: #d5cea3;
   --main-button-hover-text: #303030;
-  --main-text: #000000;
-  --main-text-secondary: #e5e5cb;
+  --main-text: #e5e5cb;
+  --main-text-secondary: #050505;
   --text-headline: #e5e5cb;
   --navigation-links: #050505;
   --icons-bright: #050505;
@@ -40,6 +40,10 @@
 
 main {
   background-color: var(--main);
+}
+
+.paragraphText {
+  font-family: "Libre Baskerville", serif;
 }
 
 .v-application__wrap {
@@ -80,6 +84,14 @@ main {
   animation: fadeinsnails 1s ease-in 3s forwards;
 }
 
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #fff;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -113,6 +125,16 @@ main {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
   }
 }
 
