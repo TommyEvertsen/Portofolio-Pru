@@ -9,4 +9,6 @@
   </v-app>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import "@/styles/styles.css";
+</script>

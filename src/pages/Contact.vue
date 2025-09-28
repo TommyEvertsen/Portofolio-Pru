@@ -40,7 +40,7 @@ import pru from "@/assets/pru.jpg";
 
 <style>
 .contact {
-  color: var(--main-text-secondary);
+  color: var(--main-text);
   font-family: "Libre Baskerville", serif;
 }
 
@@ -55,7 +55,7 @@ import pru from "@/assets/pru.jpg";
   gap: 16px;
   justify-content: start;
   margin-top: 8px;
-  color: var(--main-text-secondary) !important;
+  color: var(--main-text) !important;
 }
 
 @media (max-width: 600px) {
