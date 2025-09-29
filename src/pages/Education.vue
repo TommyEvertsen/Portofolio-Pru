@@ -80,7 +80,7 @@
                     ECTS
                   </li>
                 </ul>
-                <li>Elective Courses</li>
+                <li class="mt-4">Elective Courses</li>
                 <ul>
                   <li>Qualitative Research Methods – 7.5 ECTS</li>
                   <li>
@@ -137,14 +137,14 @@
                   <li>Economics of Motivation – 10 ECTS</li>
                   <li>Applied Learning Experience – 10 ECTS</li>
                 </ul>
-                <li>Minor (Applied Finance)</li>
+                <li class="mt-4">Minor (Applied Finance)</li>
                 <ul>
                   <li>
                     Financial Statement Analysis and Security Valuation – 10
                     ECTS
                   </li>
                 </ul>
-                <li>Master’s Thesis</li>
+                <li class="mt-4">Master’s Thesis</li>
                 <ul>
                   <li>
                     Innovation Drivers at the Firm Level: An Empirical Study of
@@ -177,7 +177,7 @@
             </p>
             <div class="mt-4 mx-2">
               <strong>Key courses</strong>
-              <ul>
+              <ul class="mb-4">
                 <li>
                   Business &amp; Management: Management Studies, Business
                   Forecasting, Consumer Behaviors &amp; Insights, Communications
@@ -224,11 +224,73 @@
           </div>
         </v-col>
       </v-row>
+
+      <v-row class="flex justify-center mt-16">
+        <h1 class="educationPhotos">- Photos of my journey -</h1>
+      </v-row>
+
+      <v-row class="mt-16">
+        <v-col
+          v-for="(image, n) in images"
+          :key="n"
+          class="d-flex child-flex"
+          cols="12"
+          xl="4"
+          lg="4"
+          md="4"
+          sm="12"
+        >
+          <v-img
+            :lazy-src="image.src"
+            :src="image.src"
+            aspect-ratio="1"
+            class="bg-grey-lighten-2"
+            cover
+          >
+            <template v-slot:placeholder>
+              <v-row align="center" class="fill-height ma-0" justify="center">
+                <v-progress-circular
+                  color="grey-lighten-5"
+                  indeterminate
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
+        </v-col>
+      </v-row>
     </v-container>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+import edu from "@/assets/edu.jpg";
+import edu2 from "@/assets/edu2.jpg";
+import edu3 from "@/assets/edu3.jpg";
+import edu4 from "@/assets/edu4.jpg";
+import edu5 from "@/assets/edu5.jpg";
+import edu6 from "@/assets/edu6.jpg";
+
+const images = [
+  {
+    src: edu,
+  },
+  {
+    src: edu2,
+  },
+  {
+    src: edu3,
+  },
+  {
+    src: edu4,
+  },
+  {
+    src: edu5,
+  },
+  {
+    src: edu6,
+  },
+];
+</script>
 
 <style>
 .education {
@@ -249,6 +311,11 @@
   font-family: "Carattere", cursive;
   font-size: 2.6rem;
   font-weight: 400;
+}
+
+.educationPhotos {
+  font-family: "Carattere", cursive;
+  color: var(--main-text);
 }
 
 @media (max-width: 600px) {

@@ -448,6 +448,8 @@ onMounted(() => {
 
 .aboutImage {
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+
 }
 
 @keyframes blink-caret {

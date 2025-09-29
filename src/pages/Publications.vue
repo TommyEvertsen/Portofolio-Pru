@@ -2,7 +2,7 @@
   <main>
     <v-container>
       <v-row class="mb-10 mt-5">
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12">
+        <v-col cols="12" xl="6" lg="6" md="6" sm="12" class="pa-4">
           <div class="publicationText">
             <h1 class="publicationTextHeadline">- Publications -</h1>
             <p>
@@ -22,8 +22,9 @@
             </ul>
           </div>
         </v-col>
-        <v-col cols="12" xl="8" lg="8" md="8" sm="12">
-          <v-img :src="pub" max-height="800px"> </v-img>
+        <v-col cols="12" xl="6" lg="6" md="6" sm="12">
+          <canvas id="about-bar-chart" style="margin-top: 2rem"></canvas>
+          <!--       <v-img :src="pub" max-height="800px"> </v-img> -->
         </v-col>
       </v-row>
 
@@ -67,37 +68,6 @@
                   >
                     Link to publication
                   </v-btn>
-
-                  <!--  <v-dialog max-width="500">
-                    <template v-slot:activator="{ props: activatorProps }">
-                      <v-btn
-                        :color="publication.color"
-                        v-bind="activatorProps"
-                        text="Abstrakt"
-                        variant="outlined"
-                      ></v-btn>
-                    </template>
-
-                    <template v-slot:default="{ isActive }">
-                      <v-card class="abstractCard">
-                        <v-card-title>
-                          {{ publication.title }}
-                        </v-card-title>
-                        <v-card-text> {{ publication.abstract }} </v-card-text>
-
-                        <v-card-actions>
-                          <v-spacer></v-spacer>
-
-                          <v-btn
-                            color="var(--main-button)"
-                            variant="outlined"
-                            text="Lukk"
-                            @click="isActive.value = false"
-                          ></v-btn>
-                        </v-card-actions>
-                      </v-card>
-                    </template>
-                  </v-dialog> -->
                 </v-card-actions>
               </v-card>
             </v-timeline-item>
@@ -140,6 +110,9 @@ import { ref } from "vue";
 import { useDisplay } from "vuetify";
 import { md } from "vuetify/iconsets/md";
 import pub from "@/assets/publications.jpg";
+import Chart from "chart.js/auto";
+import { onMounted } from "vue";
+import { color } from "chart.js/helpers";
 
 const { smAndDown } = useDisplay();
 const { mdAndUp } = useDisplay();
@@ -225,6 +198,56 @@ const publications = ref([
     icon: "mdi-star",
   },
 ]);
+
+const labels = ["2021", "2022", "2023", "2024", "2025"];
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: "Citations",
+      data: [1, 23, 53, 92, 94],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.2)",
+        "rgba(255, 159, 64, 0.2)",
+        "rgba(255, 205, 86, 0.2)",
+        "rgba(75, 192, 192, 0.2)",
+        "rgba(54, 162, 235, 0.2)",
+        "rgba(153, 102, 255, 0.2)",
+        "rgba(201, 203, 207, 0.2)",
+      ],
+      borderColor: [
+        "rgb(255, 99, 132)",
+        "rgb(255, 159, 64)",
+        "rgb(255, 205, 86)",
+        "rgb(75, 192, 192)",
+        "rgb(54, 162, 235)",
+        "rgb(153, 102, 255)",
+        "rgb(201, 203, 207)",
+      ],
+      color: ["rgba(201, 203, 207, 0.2)"],
+      borderWidth: 1,
+    },
+  ],
+};
+
+const config = {
+  type: "bar",
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+};
+
+onMounted(() => {
+  const ctx = document.getElementById("about-bar-chart");
+  if (ctx) {
+    new Chart(ctx, config);
+  }
+});
 </script>
 
 <style>

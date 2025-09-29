@@ -25,7 +25,7 @@
                 to explore how business and entrepreneurship can address global
                 sustainability challenges.
               </p>
-              <li><strong>My Teaching Approach</strong></li>
+              <li class="mt-4"><strong>My Teaching Approach</strong></li>
               <ul>
                 <li>
                   Active and problem-based learning – students work with real
@@ -48,7 +48,7 @@
                   Zoom) for flexibility and engagement.
                 </li>
               </ul>
-              <li><strong>Teaching Experience</strong></li>
+              <li class="mt-4"><strong>Teaching Experience</strong></li>
               <p>
                 I have taught at both bachelor’s and master’s levels in topics
                 such as innovation, circular economy, and research methods. My
@@ -88,7 +88,7 @@
                   University)
                 </li>
               </ul>
-              <li><strong>Supervision and Mentoring</strong></li>
+              <li class="mt-4"><strong>Supervision and Mentoring</strong></li>
               <ul>
                 <li>
                   Supervised master’s and bachelor’s theses in entrepreneurship
