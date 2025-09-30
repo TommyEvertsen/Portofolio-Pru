@@ -110,7 +110,7 @@
           sm="12"
           class="flex justify-center"
         >
-          <v-img :src="chicken" class="chickenImage"></v-img>
+          <v-img :src="chicken" class="chickenImage" max-height="900"></v-img>
         </v-col>
       </v-row>
 

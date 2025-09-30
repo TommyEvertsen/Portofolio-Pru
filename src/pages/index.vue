@@ -17,7 +17,7 @@
           </v-col>
         </v-row>
 
-        <!-- <v-row class="flex justify-center">
+        <v-row class="flex justify-center mt-16">
           <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
             <v-sheet class="info-card business-card">
               <h1 class="card-title text-center">Business</h1>
@@ -69,7 +69,7 @@
               </v-btn>
             </v-sheet>
           </v-col>
-        </v-row> -->
+        </v-row>
       </v-container>
     </v-parallax>
   </main>

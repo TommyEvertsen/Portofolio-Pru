@@ -40,12 +40,7 @@
             </v-btn>
           </div>
 
-          <!--  <canvas
-            id="about-bar-chart"
-            width="320"
-            height="200"
-            style="margin-top: 2rem"
-          ></canvas> -->
+         
 
           <div class="infoText ">
             <h3 class="section-title">Hey there! 👋</h3>
@@ -203,9 +198,7 @@ import sanfran from "@/assets/sanfran.jpg";
 import ski from "@/assets/ski.jpg";
 import stratcher from "@/assets/stratcher.jpg";
 import map from "@/assets/map.jpg";
-import Chart from "chart.js/auto";
-import { onMounted } from "vue";
-import { color } from "chart.js/helpers";
+
 
 const items = [
   { src: grand },
@@ -248,55 +241,7 @@ const hobbies = [
   },
 ];
 
-const labels = ["2021", "2022", "2023", "2024", "2025"];
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: "Citations",
-      data: [1, 23, 53, 92, 76],
-      backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
-        "rgba(255, 205, 86, 0.2)",
-        "rgba(75, 192, 192, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(153, 102, 255, 0.2)",
-        "rgba(201, 203, 207, 0.2)",
-      ],
-      borderColor: [
-        "rgb(255, 99, 132)",
-        "rgb(255, 159, 64)",
-        "rgb(255, 205, 86)",
-        "rgb(75, 192, 192)",
-        "rgb(54, 162, 235)",
-        "rgb(153, 102, 255)",
-        "rgb(201, 203, 207)",
-      ],
-      color: ["rgba(201, 203, 207, 0.2)"],
-      borderWidth: 1,
-    },
-  ],
-};
 
-const config = {
-  type: "bar",
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-};
-
-onMounted(() => {
-  const ctx = document.getElementById("about-bar-chart");
-  if (ctx) {
-    new Chart(ctx, config);
-  }
-});
 </script>
 
 <style>
