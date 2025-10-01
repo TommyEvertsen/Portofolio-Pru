@@ -34,7 +34,7 @@
       <v-list-item
         prepend-avatar="@/assets/pru.jpg"
         class="me"
-        subtitle="Reasearcher"
+        subtitle="Researcher"
         title="Phuc Evertsen"
       ></v-list-item>
     </v-list>

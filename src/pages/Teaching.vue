@@ -110,6 +110,7 @@
           sm="12"
           class="flex justify-center"
         >
+          <div class="chickenImageContainer"></div>
           <v-img :src="chicken" class="chickenImage" max-height="900"></v-img>
         </v-col>
       </v-row>
@@ -181,7 +182,14 @@ import chicken from "@/assets/chicken.jpg";
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
-.chickenImage {
+.chickenImage img {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+
+/* .chickenImageContainer {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  height: 900px;
+  width: 600px;
+  background: url("@/assets/chicken.jpg") center center / cover no-repeat;
+} */
 </style>
