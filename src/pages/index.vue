@@ -135,6 +135,7 @@ const navigateToEducation = () => {
   padding: 2rem;
   border: 4px solid var(--main-secondary) !important;
   background-color: var(--main-context) !important;
+  color: var(--main-text-secondary);
 }
 
 .infoCard-btn {
@@ -147,7 +148,7 @@ const navigateToEducation = () => {
 }
 
 .card-title {
-  color: var(--main-text);
+  color: var(--main-text-secondary);
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -165,6 +166,7 @@ const navigateToEducation = () => {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--main-text-secondary);
 }
 
 .about-links > v-btn {
