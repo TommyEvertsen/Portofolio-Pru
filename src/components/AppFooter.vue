@@ -44,7 +44,7 @@ const items = [
 <style>
 /* Footer */
 .app-footer {
-  background: var(--main) !important;
+  background: var(--navigation) !important;
   color: var(--main-secondary);
 
   display: flex;
