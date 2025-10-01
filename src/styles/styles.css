@@ -2,7 +2,8 @@
 
 :root,
 .theme-dark {
-  --main: #1a120b;
+  --main: #192734;
+  --navigation: #22303c;
   --main-secondary: #e5e5cb;
   --main-context: #e5e5cb;
   --main-button: #3c2a21;
@@ -22,6 +23,7 @@
 
 .theme-light {
   --main: #fefcf3; /* Background color */
+  --navigation: #fefcf3;
   --main-secondary: #000000; /* borders  */
   --main-context: #f5ebe0; /* the boxes of text and top of page*/
   --main-button: #000000; /* buttons */

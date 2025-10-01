@@ -111,7 +111,7 @@
           class="flex justify-center"
         >
           <div class="chickenImageContainer"></div>
-          <v-img :src="chicken" class="chickenImage" max-height="900"></v-img>
+          <v-img :src="chicken" class="chickenImage"></v-img>
         </v-col>
       </v-row>
 

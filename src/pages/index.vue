@@ -133,9 +133,33 @@ const navigateToEducation = () => {
 .info-card {
   border-radius: 25px !important;
   padding: 2rem;
-  border: 4px solid var(--main-secondary) !important;
   background-color: var(--main-context) !important;
   color: var(--main-text-secondary);
+  position: relative;
+  z-index: 1;
+}
+
+.info-card::after,
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    #ff6700,
+    #1982c4,
+    #f8c794,
+    #e5e5cb,
+    #ff6700
+  );
+  background-size: 400%;
+  z-index: -1;
+  animation: glow 20s linear infinite;
+  filter: blur(5px);
+  border-radius: inherit;
 }
 
 .infoCard-btn {
@@ -204,6 +228,20 @@ const navigateToEducation = () => {
 
   .parallax-overlay {
     background: rgba(24, 24, 24, 0.3) !important;
+  }
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
   }
 }
 </style>

@@ -27,7 +27,7 @@
     width="220"
     v-if="drawer"
     v-model="drawer"
-    color="var(--main)"
+    color="var(--navigation)"
     density
   >
     <v-list>
