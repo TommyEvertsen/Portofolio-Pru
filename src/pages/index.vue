@@ -139,7 +139,7 @@ const navigateToEducation = () => {
   z-index: 1;
 }
 
-.info-card::after,
+/* .info-card::after,
 .info-card::before {
   content: "";
   position: absolute;
@@ -160,7 +160,7 @@ const navigateToEducation = () => {
   animation: glow 20s linear infinite;
   filter: blur(5px);
   border-radius: inherit;
-}
+} */
 
 .infoCard-btn {
   color: var(--main-button) !important;

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevation="0" color="var(--main-context)">
+  <v-app-bar elevation="0" color="var(--navigation-top)">
     <template v-slot:prepend>
       <v-app-bar-nav-icon
         @click="show"
@@ -7,7 +7,11 @@
       ></v-app-bar-nav-icon>
     </template>
 
-    <v-app-bar-title>{{ appBarTitle }}</v-app-bar-title>
+    <v-app-bar-title color="var(--icons-bright)">
+      <div class="appTitle">
+        {{ appBarTitle }}
+      </div>
+    </v-app-bar-title>
 
     <template v-slot:append>
       <v-btn
@@ -277,5 +281,9 @@ const appBarTitle = computed(() => routeTitles[route.name] || "Home");
 
 .v-list-item.v-list-item--active {
   background-color: var(--active) !important;
+}
+
+.appTitle {
+  color: var(--icons-bright);
 }
 </style>
