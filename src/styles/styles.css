@@ -4,6 +4,7 @@
 .theme-dark {
   --main: #192734;
   --navigation: #22303c;
+  --navigation-top: #22303c;
   --main-secondary: #e5e5cb;
   --main-context: #e5e5cb;
   --main-button: #3c2a21;
@@ -13,7 +14,7 @@
   --main-text-secondary: #050505;
   --text-headline: #e5e5cb;
   --navigation-links: #050505;
-  --icons-bright: #050505;
+  --icons-bright: #e5e5cb;
   --icons-secondary: #d5cea3;
   --icons-dark: #c9a13b;
   --theme: #ff8c00;
@@ -24,6 +25,7 @@
 .theme-light {
   --main: #fefcf3; /* Background color */
   --navigation: #fefcf3;
+  --navigation-top: #f5ebe0;
   --main-secondary: #000000; /* borders  */
   --main-context: #f5ebe0; /* the boxes of text and top of page*/
   --main-button: #000000; /* buttons */
